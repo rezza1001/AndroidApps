@@ -1,0 +1,47 @@
+<resources>
+    <string name="app_name">UnileverApp</string>
+
+
+    <string name="forgot_password">Forgot your password?</string>
+    <string name="not_member">Not A Member?</string>
+    <string name="join_today">Join Today!</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login_now">Login Now</string>
+    <string name="register_now">Register Now</string>
+    <string name="continue_order">Continue Order</string>
+    <string name="add_to_chart">Add to Chart</string>
+    <string name="buy">Beli</string>
+    <string name="remove_from_chart">Remove from Chart</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="special_offers">Special Offers</string>
+    <string name="move_to_wish">Move to Wishlist</string>
+    <string name="shopping_total">Shopping Total </string>
+    <string name="register">Register </string>
+    <string name="name">Outlet Name </string>
+    <string name="contact">Outlet Contact </string>
+    <string name="address">Outlet Address </string>
+    <string name="city">Outlet City </string>
+    <string name="phone">Outlet Phone </string>
+    <string name="email">Outlet Email </string>
+    <string name="term_of_payment">Outlet Term of Payment </string>
+    <string name="confirm_password">Confirmation Password </string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="lets_order_now">Let\'s Order Now ! </string>
+    <string name="edit">Edit</string>
+    <string name="change_password">Change Password</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="close">Close</string>
+    <string name="order_now">Order Now</string>
+    <string name="price">Harga</string>
+    <string name="brand">Brand</string>
+    <string name="category">Category</string>
+    <string name="description">Description</string>
+    <string name="todo">TODO</string>
+</resources>
