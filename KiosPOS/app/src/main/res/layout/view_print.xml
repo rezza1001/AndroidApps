@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rvly_header_20"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rvly_body_21"
+            android:layout_below="@+id/rvly_header_20"
+            android:background="@color/colorWhite_00"
+            android:paddingRight="@dimen/size_5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <LinearLayout
+                android:id="@+id/lnly_value_30"
+                android:layout_below="@+id/texvw_selected_31"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <g.rezza.moch.kiosappsoffline.component.TextKeyValue
+                    android:id="@+id/txkv_orderdtl_40"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <g.rezza.moch.kiosappsoffline.component.TextKeyValue
+                    android:id="@+id/txkv_price_41"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <g.rezza.moch.kiosappsoffline.component.TextKeyValue
+                    android:id="@+id/txkv_qty_42"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <g.rezza.moch.kiosappsoffline.component.TextKeyValue
+                    android:id="@+id/txkv_total_43"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+                <TextView
+                    android:id="@+id/texvw_info_42"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size_10sp"
+                    android:gravity="center"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:text="* Subtotal diluar transaction cost (apabila menggunakan debit/credit card)"
+                    android:layout_alignParentTop="true" />
+                <g.rezza.moch.kiosappsoffline.component.TextKeyValue
+                    android:id="@+id/txkv_status_44"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/imvw_qrcode_31"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/lnly_value_30"
+                android:layout_width="@dimen/size_250dp"
+                android:layout_height="@dimen/size_250dp"
+                android:scaleType="fitXY"
+                android:background="#00000000"
+                app:srcCompat="@mipmap/ic_qrcode" />
+
+        </RelativeLayout>
+
+
+
+        <RelativeLayout
+            android:padding="@dimen/size_5dp"
+            android:layout_below="@+id/rvly_body_21"
+            android:id="@+id/rvly_footer_22"
+            android:background="@drawable/background_white_shadow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

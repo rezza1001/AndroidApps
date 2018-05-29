@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_bluethooth"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activitty.PrintActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="@dimen/size_135dp"
+            android:layout_height="@dimen/size_240dp"
+            android:visibility="invisible"
+            android:scaleType="fitStart"
+            android:src="@mipmap/ic_qrcode"
+            android:id="@+id/imvw_print_20" />
+    </LinearLayout>
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#0D0D31</color>
+    <color name="colorPrimaryDark">#0D0D31</color>
+    <color name="colorAccent">#F3F3FD</color>
+
+    <color name="colorPrimaryDark_t70">#B30D0D31</color>
+    <color name="colorGreen_00">#c0ffbe</color>
+    <color name="colorgrey_01_t50">#80e1e1e1</color>
+    <color name="colorBlue_06_t33">#33132F61</color>
+    <color name="colorBlue_06_t50">#80132F61</color>
+    <color name="colorBlue_06">#132F61</color>
+    <color name="colorWhite_00">#ffffff</color>
+    <color name="colorWhite_00_t70">#80ffffff</color>
+    <color name="colorGrey_00">#cccccc</color>
+    <color name="colorRed_00">#c0081d</color>
+    <color name="colorOrange_00_t50">#80f08705</color>
+    <color name="colorOrange_00">#f08705</color>
+    <color name="colorWhite_01">#f2f2fc</color>
+    <color name="colorWhite_02">#fcfcfe</color>
+    <color name="colorWhite_03">#eaf6fe</color>
+    <color name="colorWhite_04">#f6fafa</color>
+    <color name="colorWhite_05">#fcf8f8</color>
+    <color name="colorWhite_02_t50">#80fcfcfe</color>
+    <color name="colorYellow_01">#f8cc11</color>
+    <color name="colorYellow_01_t50">#80f8cc11</color>
+    <color name="colorBlue_01">#004265</color>
+    <color name="colorBlue_02">#0085ca</color>
+    <color name="colorBlue_03">#116895</color>
+    <color name="colorBlue_04">#204890</color>
+    <color name="colorBlue_05">#0B3E6D</color>
+    <color name="colorBlue_11">#32ACFF</color>
+    <color name="colorBlue_12">#2378b2</color>
+    <color name="colorBlue_13">#c1e6ff</color>
+    <color name="colorWhite_01_t33">#33f2f2fc</color>
+    <color name="colorWhite_06">#F2F2F2</color>
+    <color name="colorBlueBlack_01">#02090d</color>
+    <color name="colorBlueBlack_02">#0c2a3d</color>
+    <color name="colorBlueBlack_01_t50">#8002090d</color>
+    <color name="colorBlueBlack_01_t33">#3302090d</color>
+    <color name="colorgreen_01">#38cc28</color>
+    <color name="colorgreen_01_t50">#8038cc28</color>
+    <color name="colorgrey_01">#e1e1e1</color>
+    <color name="colorgrey_01_t33">#33e1e1e1</color>
+    <color name="colorred_01">#ee4040</color>
+    <color name="colorred_01_t50">#80ee4040</color>
+
+    <color name="color_navmenu_header">#6174b7</color>
+
+
+
+</resources>

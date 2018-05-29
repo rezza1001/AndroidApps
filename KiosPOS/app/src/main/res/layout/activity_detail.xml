@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="g.rezza.moch.kiospos.Activitty.DetailActivity">
+
+    <RelativeLayout
+        android:id="@+id/rvly_header_00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:paddingBottom="@dimen/size_20dp"
+        android:paddingLeft="@dimen/size_50dp"
+        android:paddingRight="@dimen/size_50dp"
+        android:paddingTop="@dimen/size_5dp">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/size_100dp"
+            android:layout_height="@dimen/size_50dp"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY"
+            app:srcCompat="@mipmap/logo_kiostix_small" />
+
+        <g.rezza.moch.kiospos.component.EditextSearch
+            android:id="@+id/edtx_seacrh_40"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toEndOf="@+id/imageView2">
+
+        </g.rezza.moch.kiospos.component.EditextSearch>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rvly_header_00">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/size_150dp"
+            android:layout_height="@dimen/size_150dp"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            app:srcCompat="@mipmap/music1" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:layout_toEndOf="@+id/imageView">
+
+            <TextView
+                android:id="@+id/textView2"
+                style="@style/textgrlow_blue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:text="Joey Alexander Trio Wonderful Indonesia"
+                android:textSize="@dimen/size_14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                style="@style/textgrlow_blue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/textView2"
+                android:text="Pianis jazz muda berbakat dengan segudang prestasi ini siap menggelar konser bertajuk “Joey Alexander Wonderfull Indonesia” pada tanggal 12 November 2017. Di konser ini Joey Alexander tidak tampil sendiri, dengan format trio, Joey Alexander siap memanjakan telinga penonton melalui suguhan musik jazz terbaik."
+                android:textSize="@dimen/size_10sp" />
+
+            <Button
+                android:id="@+id/bbtn_buy_40"
+                style="@style/textgrlow_white"
+                android:layout_width="@dimen/size_100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/size_10dp"
+                android:background="@drawable/button_orange_round_full"
+                android:text="Buy Ticket" />
+
+            <Button
+                android:id="@+id/bbtn_back_41"
+                style="@style/textgrlow_white"
+                android:layout_width="@dimen/size_100dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:layout_toStartOf="@+id/bbtn_buy_40"
+                android:background="@drawable/button_red_round_full"
+                android:text="Back" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

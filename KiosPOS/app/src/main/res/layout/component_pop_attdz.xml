@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:id="@+id/rvly_body_21"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/rvly_header_20"
+                android:layout_centerInParent="true"
+                android:background="@color/colorWhite_01"
+                android:paddingBottom="@dimen/size_10dp"
+                android:paddingLeft="@dimen/size_5dp"
+                android:paddingRight="@dimen/size_5dp"
+                android:paddingTop="@dimen/size_10dp">
+
+                <TextView
+                    android:id="@+id/texvw_info_30"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:gravity="center"
+                    android:text="Please complete these"
+                    android:textColor="@color/colorBlue_06"
+                    android:textSize="@dimen/size_12sp" />
+
+                <TextView
+                    android:id="@+id/texvw_info_31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/texvw_info_30"
+                    android:gravity="center"
+                    android:text="following fields"
+                    android:textColor="@color/colorBlue_06"
+                    android:textSize="@dimen/size_12sp" />
+
+
+                <g.rezza.moch.kiospos.component.MyEditext
+                    android:id="@+id/myedtx_name_31"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/texvw_info_30"
+                    android:layout_marginTop="@dimen/size_10dp" />
+
+                <g.rezza.moch.kiospos.component.MyDatePicker
+                    android:id="@+id/mydtpk_birth_32"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/myedtx_name_31"
+                    android:layout_marginTop="@dimen/size_10dp" />
+
+                <g.rezza.moch.kiospos.component.GenderOption
+                    android:id="@+id/gopt_gender_33"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/mydtpk_birth_32"
+                    android:layout_marginTop="@dimen/size_10dp" />
+
+                <g.rezza.moch.kiospos.component.AutoComplete
+                    android:id="@+id/acpl_city_34"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/gopt_gender_33"
+                    android:layout_marginTop="@dimen/size_10dp" />
+
+                <Button
+                    android:id="@+id/bbtn_ok_30"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_40dp"
+                    android:layout_below="@+id/acpl_city_34"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:background="@drawable/button_active_1"
+                    android:text="OK"
+                    android:textColor="@color/colorWhite_00"
+                    android:textSize="@dimen/size_12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context=".Activitty.MainActivity"
+    >
+
+    <TextView
+        android:id="@+id/txvw_title_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_10sp"
+        android:textColor="@color/colorBlue_06"
+        android:text="Title" />
+
+    <LinearLayout
+        android:id="@+id/lnly"
+        android:layout_below="@+id/txvw_title_10"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imvw_icon_30"
+                android:layout_marginRight="@dimen/size_5dp"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
+                android:scaleType="fitCenter"
+                android:padding="@dimen/size_8dp"
+                android:background="@drawable/background_editext_grey"
+                app:srcCompat="@drawable/ic_autocomplete_off" />
+
+            <AutoCompleteTextView
+                android:background="@drawable/background_editext_grey"
+                android:id="@+id/edtx_default_30"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40dp"
+                android:gravity="center_vertical"
+                android:inputType="text"
+                android:paddingLeft="@dimen/size_5dp"
+                android:textSize="@dimen/size_12sp"
+                android:hint="Type Here"
+                android:layout_toEndOf="@+id/imvw_icon_30" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>
