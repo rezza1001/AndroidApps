@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.codetail.widget.RevealFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:background="@drawable/background24"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/size_60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:id="@+id/rvly_header_00"
+                android:padding="@dimen/size_5dp"
+                android:background="@color/blue_01_t80"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_140dp">
+
+                <ImageView
+                    android:id="@+id/imvw_foto_00"
+                    android:layout_width="@dimen/size_120dp"
+                    android:layout_height="@dimen/size_120dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@mipmap/ic_profile" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toEndOf="@+id/imvw_foto_00"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/txvw_name_00"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/text_arsenal_white_00"
+                        android:textStyle="bold"
+                        android:textSize="@dimen/size_18sp"
+                        android:text="Mochamad Rezza" />
+
+                    <TextView
+                        android:id="@+id/txvw_position_00"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/text_arsenal_white_00"
+                        android:textSize="@dimen/size_14sp"
+                        android:text="Programmer" />
+
+                    <TextView
+                        android:id="@+id/txvw_emial_company_00"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/text_arsenal_white_00"
+                        android:textSize="@dimen/size_14sp"
+                        android:text="rezza@gmail.com" />
+
+                    <RelativeLayout
+                        android:id="@+id/bbtn_password_00"
+                        android:layout_marginTop="@dimen/size_5dp"
+                        android:background="@drawable/button_orange"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_35dp">
+
+                        <TextView
+                            android:id="@+id/textView5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            style="@style/text_arsenal_white_00"
+                            android:textSize="@dimen/size_16sp"
+                            android:text="@string/change_password" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@+id/rvly_header_00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <include
+                    android:layout_marginTop="@dimen/size_5dp"
+                    layout="@layout/view_profile_fragment_body"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </FrameLayout>
+</io.codetail.widget.RevealFrameLayout>

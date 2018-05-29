@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context="g.rezza.moch.grupia.SignInActivity">
+
+
+    <RelativeLayout
+        android:layout_centerVertical="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            app:srcCompat="@mipmap/ic_launcher_round" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/size_20dp"
+            android:paddingRight="@dimen/size_20dp"
+            android:layout_below="@+id/imageView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_50dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edtx_username_00"
+                android:background="@drawable/editext_custom_01"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_45dp"
+                android:textSize="@dimen/size_16sp"
+                android:hint="@string/account"
+                android:layout_marginBottom="@dimen/size_2dp"
+                android:padding="@dimen/size_5dp"
+                android:inputType="textPersonName" />
+            <EditText
+                android:id="@+id/edtx_password_00"
+                android:background="@drawable/editext_custom_01"
+                android:layout_width="match_parent"
+                android:hint="@string/password"
+                android:padding="@dimen/size_5dp"
+                android:textSize="@dimen/size_16sp"
+                android:layout_height="@dimen/size_45dp"
+                android:inputType="textPassword" />
+
+            <Button
+                android:id="@+id/bbtn_signin_00"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:background="@drawable/button_green"
+                android:layout_width="match_parent"
+                android:textAllCaps="false"
+                style="@style/TextView.White.Casual"
+                android:layout_height="@dimen/size_45dp"
+                android:textSize="@dimen/size_16sp"
+                android:text="@string/button_signin" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_30dp"
+                android:text="@string/register_desc"
+                android:textSize="@dimen/size_16sp" />
+
+            <Button
+                android:id="@+id/bbtn_register_00"
+                android:layout_marginTop="@dimen/size_10dp"
+                style="@style/TextView.White.Casual"
+                android:layout_width="match_parent"
+                android:background="@drawable/button_green"
+                android:textAllCaps="false"
+                android:layout_height="@dimen/size_45dp"
+                android:layout_marginBottom="@dimen/size_40dp"
+                android:textSize="@dimen/size_16sp"
+                android:text="@string/button_register" />
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

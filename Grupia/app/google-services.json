@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "309215452330",
+    "firebase_url": "https://grupia-62f9c.firebaseio.com",
+    "project_id": "grupia-62f9c",
+    "storage_bucket": "grupia-62f9c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:309215452330:android:2044d3833c2f27dc",
+        "android_client_info": {
+          "package_name": "g.rezza.moch.grupia"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "309215452330-9hsa91599uhfunjdnva7ouqjbbd4k7ml.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "g.rezza.moch.grupia",
+            "certificate_hash": "6fa621ad776bceb8cf4b828ab7e8791dc1aee71c"
+          }
+        },
+        {
+          "client_id": "309215452330-ftmh7nk2ivk9bsrr7gcmuot5e1b1gd7c.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC7hhlsnrDFbwNreL2cvgwEtIeghhJI-GQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "309215452330-ftmh7nk2ivk9bsrr7gcmuot5e1b1gd7c.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

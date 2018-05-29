@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rvly_store_00"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.30"
+            android:background="@color/blue_01">
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/rvly_body_00"
+            android:layout_weight="9.70"
+            android:layout_width="0dp"
+            android:weightSum="10"
+            android:background="@color/white_00_t50"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:layout_weight="10"
+                android:padding="@dimen/size_5dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txvw_work_00"
+                    style="@style/text_arsenal_blcak_00"
+                    android:textSize="@dimen/size_14sp"
+                    android:textStyle="bold"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Senin" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <RelativeLayout
+                        android:layout_alignParentLeft="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/textView2"
+                            android:layout_toEndOf="@+id/imageView"
+                            android:layout_marginLeft="@dimen/size_5dp"
+                            style="@style/text_arsenal_grey_02"
+                            android:textSize="@dimen/size_12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jam masuk" />
+
+                        <TextView
+                            android:id="@+id/txvw_checkin_00"
+                            android:layout_below="@+id/textView2"
+                            android:layout_toEndOf="@+id/imageView"
+                            android:layout_marginLeft="@dimen/size_5dp"
+                            style="@style/text_arsenal_grey_02"
+                            android:textSize="@dimen/size_12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="19:00:00" />
+
+                        <ImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="@dimen/size_35dp"
+                            android:layout_height="@dimen/size_35dp"
+                            app:srcCompat="@mipmap/ic_clock" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_alignParentRight="true"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:id="@+id/textView3"
+                            android:layout_toEndOf="@+id/imageView2"
+                            android:layout_marginLeft="@dimen/size_5dp"
+                            style="@style/text_arsenal_grey_02"
+                            android:textSize="@dimen/size_12sp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jam Keluar" />
+
+                        <TextView
+                            android:id="@+id/txvw_checkout_00"
+                            android:layout_below="@+id/textView3"
+                            android:layout_toEndOf="@+id/imageView2"
+                            android:layout_marginLeft="@dimen/size_5dp"
+                            style="@style/text_arsenal_grey_02"
+                            android:textSize="@dimen/size_12sp"
+                            android:minWidth="@dimen/size_100dp"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="19:00:00" />
+
+                        <ImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="@dimen/size_35dp"
+                            android:layout_height="@dimen/size_35dp"
+                            app:srcCompat="@mipmap/ic_clock_off" />
+
+                    </RelativeLayout>
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txvw_note_00"
+                    style="@style/text_arsenal_blcak_00"
+                    android:textSize="@dimen/size_12sp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="-" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+</RelativeLayout>

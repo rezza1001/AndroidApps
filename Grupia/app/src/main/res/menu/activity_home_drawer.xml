@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_dashboard"
+            android:icon="@mipmap/ic_dashboard"
+            android:title="@string/navigation_dashboard" />
+        <item
+            android:id="@+id/nav_map"
+            android:icon="@mipmap/ic_map"
+            android:title="@string/navigation_map" />
+        <item
+            android:id="@+id/nav_order"
+            android:icon="@mipmap/ic_order"
+            android:title="@string/navigation_order" />
+        <item
+            android:id="@+id/nav_member"
+            android:icon="@mipmap/ic_member"
+            android:title="@string/navigation_member" />
+        <item
+            android:id="@+id/nav_promotion"
+            android:icon="@mipmap/ic_promotion"
+            android:title="@string/navigation_promo" />
+
+    </group>
+
+    <item android:title="@string/communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_chat"
+                android:icon="@mipmap/ic_message"
+                android:title="@string/navigation_chat" />
+            <item
+                android:id="@+id/nav_notification"
+                android:icon="@mipmap/ic_notification"
+                android:title="@string/navigation_notif" />
+        </menu>
+    </item>
+    <item android:title="@string/account">
+        <menu>
+            <item
+                android:id="@+id/nav_logout"
+                android:icon="@mipmap/ic_out"
+                android:title="@string/navigation_logout" />
+        </menu>
+    </item>
+
+</menu>

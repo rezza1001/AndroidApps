@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:gravity="center"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:padding="@dimen/size_5dp"
+        android:layout_width="@dimen/size_320dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txvw_title_00"
+            style="@style/text_arsenal_blue_00"
+            android:textSize="@dimen/size_18sp"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title" />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/size_5dp"
+            android:layout_marginBottom="@dimen/size_5dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:id="@+id/txvw_message_00"
+            style="@style/text_arsenal_grey_02"
+            android:textSize="@dimen/size_16sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Message" />
+
+        <LinearLayout
+            android:id="@+id/lnly_notif_00"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txvw_notif_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textSize="@dimen/size_12sp"
+                style="@style/text_arsenal_red"
+                android:text="@string/error_field_required" />
+
+            <ImageView
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:layout_width="@dimen/size_20dp"
+                android:layout_height="@dimen/size_20dp"
+                app:srcCompat="@mipmap/ic_info_red" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/edtx_message_00"
+            style="@style/text_arsenal_blcak_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="5"
+            android:minLines="3"
+            android:maxLines="7"
+            android:scrollbars="vertical"
+            android:gravity="top|left"
+            android:textSize="@dimen/size_16sp"
+            android:inputType="textMultiLine" />
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/size_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/bbtn_cancel_00"
+                android:background="@drawable/button_grey_01"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cancel" />
+
+            <Button
+                android:id="@+id/bbtn_ok_00"
+                android:background="@drawable/button_green"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/ok" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

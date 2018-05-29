@@ -1,0 +1,55 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="g.rezza.moch.nfcscanner.Main2Activity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:weightSum="8"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_weight="8"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:gravity="center_horizontal"
+            android:layout_height="0dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/logoproject"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="20dp"
+                android:scaleType="fitXY"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/imvw_logo" />
+
+            <TextView
+                android:text="Order"
+                android:gravity="center"
+                android:textSize="15pt"
+                android:textColor="@color/colorBlack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/txvw_header" />
+
+            <TextView
+                android:id="@+id/txvw_order_00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="" />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+</RelativeLayout>

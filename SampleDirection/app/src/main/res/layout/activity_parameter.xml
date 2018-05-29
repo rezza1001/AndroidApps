@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80818b9b"
+    tools:context="g.rezza.moch.sampledirection.ParameterActivity">
+
+    <LinearLayout
+        android:id="@+id/lnly_param_00"
+        android:orientation="vertical"
+        android:background="#4d6194"
+        android:layout_width="match_parent"
+        android:padding="5dp"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="#ffff"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <RelativeLayout
+                android:background="#ab1a22"
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/txvw_current_00"
+                android:visibility="gone"
+                android:textSize="14sp"
+                android:layout_marginLeft="5dp"
+                android:hint="Current Location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <fragment
+                android:id="@+id/autocomplete_fragment_from"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:background="#ffff"
+            android:layout_width="match_parent"
+            android:layout_height="45dp">
+
+            <RelativeLayout
+                android:background="#166614"
+                android:layout_width="50dp"
+                android:layout_height="match_parent">
+
+            </RelativeLayout>
+
+            <fragment
+                android:id="@+id/autocomplete_fragment"
+                android:name="com.google.android.gms.location.places.ui.PlaceAutocompleteFragment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bbtn_route_00"
+            android:background="#166614"
+            android:layout_marginTop="10dp"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="#ffff"
+            android:text="Cari Rute"
+            android:layout_width="match_parent"
+            android:layout_height="40dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/lnly_param_00"
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lsvw_dest_00"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

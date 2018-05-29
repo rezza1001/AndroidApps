@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Grupia</string>
+
+    <string name="button_signin">masuk</string>
+    <string name="button_register">daftar</string>
+    <string name="button_readmore">Read More</string>
+    <string name="button_order">Order</string>
+
+    <string name="register_desc">Belum memiliki akun? daftar dulu </string>
+    <string name="account">akun</string>
+    <string name="password">sandi</string>
+    <string name="register_new_account">Registrasi Akun Baru</string>
+    <string name="select_community">Pilih Komunitas</string>
+    <string name="code_community">Kode Komunitas</string>
+    <string name="account_data">Data Akun</string>
+    <string name="full_name">Nama Lengkap</string>
+    <string name="email">Email</string>
+    <string name="phone">Nomor Telepon</string>
+    <string name="login_data">Data Login</string>
+    <string name="title_activity_home">HomeActivity</string>
+
+    <string name="navigation_profile">Profile</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="navigation_dashboard">Dashboard</string>
+    <string name="navigation_map">Peta Anggota</string>
+    <string name="navigation_order">Order &amp; Pembayaran</string>
+    <string name="navigation_member">Data Anggota</string>
+    <string name="navigation_chat">Chat</string>
+    <string name="navigation_notif">Notification</string>
+    <string name="navigation_promo">Promo</string>
+    <string name="navigation_logout">Logout</string>
+    <string name="communicate">Komunikasi</string>
+    <string name="profile">Profile</string>
+    <string name="photo">Foto</string>
+    <string name="select_chapter">Pilih Chapter</string>
+    <string name="member">Anggota</string>
+    <string name="_select_">- Pilih -</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="by">By</string>
+</resources>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:padding="@dimen/size_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rvly_header_00"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_80dp">
+
+            <TextView
+                android:id="@+id/txvw_title_00"
+                android:textSize="@dimen/size_16sp"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:fontFamily="@font/open_sans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/select_chapter" />
+            <TextView
+                android:id="@+id/txvw_value_00"
+                android:layout_below="@+id/txvw_title_00"
+                android:background="@drawable/button_white"
+                android:textSize="@dimen/size_14sp"
+                android:padding="@dimen/size_10dp"
+                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50dp"
+                android:text="@string/_select_" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_alignBottom="@+id/txvw_value_00"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_below="@+id/txvw_title_00"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                app:srcCompat="@mipmap/ic_down" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rvly_serach_00"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:layout_marginBottom="@dimen/size_10dp"
+            android:layout_below="@+id/rvly_header_00"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txvw_title_01"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/size_18sp"
+                android:fontFamily="@font/open_sans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/member" />
+
+            <g.rezza.moch.grupia.component.SearchViw
+                android:id="@+id/serchvw_00"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imvw_search_00"
+                android:src="@mipmap/ic_search"
+                app:civ_border_color="@color/grey"
+                app:civ_border_width="0dp"
+                android:layout_alignParentRight="true"
+                android:layout_width="@dimen/size_35dp"
+                android:layout_height="@dimen/size_35dp" />
+
+        </RelativeLayout>
+
+
+
+        <ListView
+            android:id="@+id/lsvw_member_00"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/rvly_serach_00" />
+
+    </RelativeLayout>
+</LinearLayout>

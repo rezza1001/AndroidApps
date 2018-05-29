@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="utf-8"?>
+<io.codetail.widget.RevealFrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <FrameLayout
+        android:id="@+id/container"
+        android:background="@drawable/background24"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.skyfishjy.library.RippleBackground
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/content_loading_00"
+            app:rb_color="@color/green_02"
+            app:rb_radius="@dimen/size_32dp"
+            app:rb_rippleAmount="4"
+            app:rb_duration="3000"
+            app:rb_scale="6">
+
+            <TextView
+                android:id="@+id/txvw_find_loc_00"
+                android:layout_below="@+id/centerImage"
+                android:layout_centerInParent="true"
+                android:text="Find location in radius 10 M"
+                style="@style/text_arsenal_white_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_centerInParent="true"
+                android:id="@+id/centerImage"
+                android:src="@mipmap/ic_matching_loc"/>
+        </com.skyfishjy.library.RippleBackground>
+
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/size_60dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/lnly_header_00"
+                android:padding="@dimen/size_5dp"
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/size_5dp"
+                android:layout_height="wrap_content"
+                android:background="@color/blue_01_t80"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/size_5dp"
+                    android:weightSum="10">
+
+                    <TextView
+                        android:id="@+id/txvw_date_00"
+                        style="@style/text_arsenal_grey_01"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:fontFamily="@font/arsenal"
+                        android:text="Selasa, 24 Januari 2018"
+                        android:textSize="@dimen/size_16sp" />
+
+                    <TextClock
+                        android:id="@+id/txcl_time_00"
+                        style="@style/text_arsenal_grey_01"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/arsenal"
+                        android:format12Hour="hh:mm:ss a"
+                        android:format24Hour="hh:mm:ss"
+                        android:gravity="right"
+                        android:textSize="@dimen/size_18sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/textView4"
+                        style="@style/text_arsenal_white_00"
+                        android:textSize="@dimen/size_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/size_5dp"
+                        android:text="@string/workin" />
+
+                    <LinearLayout
+                        android:layout_weight="4"
+                        android:layout_width="0dp"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txvw_work_time_00"
+                            style="@style/text_arsenal_white_00"
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/size_10dp"
+                            android:textSize="@dimen/size_16sp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="00:00" />
+
+                        <TextView
+                            android:id="@+id/txvw_diff_00"
+                            style="@style/text_arsenal_white_00"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/arsenal"
+                            android:text="-"
+                            android:gravity="right"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/size_16sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="1"
+                        style="@style/text_arsenal_white_00"
+                        android:textSize="@dimen/size_16sp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/size_5dp"
+                        android:text="@string/workout" />
+
+                    <LinearLayout
+                        android:layout_weight="4"
+                        android:layout_width="0dp"
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txvw_work_out_00"
+                            style="@style/text_arsenal_white_00"
+                            android:gravity="right"
+                            android:layout_marginRight="@dimen/size_10dp"
+                            android:textSize="@dimen/size_16sp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="00:00" />
+
+                        <TextView
+                            android:id="@+id/txvw_diffout_00"
+                            style="@style/text_arsenal_white_00"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/arsenal"
+                            android:text="-"
+                            android:gravity="right"
+                            android:layout_weight="1"
+                            android:textSize="@dimen/size_16sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnly_body_00"
+                android:layout_below="@+id/lnly_header_00"
+                android:layout_width="match_parent"
+                android:layout_above="@+id/lnly_bottom_00"
+                android:layout_margin="@dimen/size_5dp"
+                android:background="@color/white_00_t50"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    style="@style/text_arsenal_blcak_00"
+                    android:textSize="@dimen/size_18sp"
+                    android:textStyle="bold"
+                    android:background="@color/white_00"
+                    android:paddingLeft="@dimen/size_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/history" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/grey_01"
+                    android:layout_height="1dp"></RelativeLayout>
+
+                <TextView
+                    android:id="@+id/txvw_empty_00"
+                    style="@style/text_arsenal_grey_01"
+                    android:textSize="@dimen/size_18sp"
+                    android:textStyle="bold"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/size_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="@string/empty_data" />
+
+                <ListView
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:visibility="gone"
+                    android:id="@+id/lsvw_history_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnly_bottom_00"
+                android:layout_width="match_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="@dimen/size_5dp"
+                android:layout_height="@dimen/size_55dp"
+                android:orientation="horizontal">
+
+                <g.rezza.moch.hrsystem.component.ScanOffice
+                    android:id="@+id/scn_office_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+</io.codetail.widget.RevealFrameLayout>

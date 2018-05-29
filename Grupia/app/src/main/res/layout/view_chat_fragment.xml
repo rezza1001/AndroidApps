@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:background="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ListView
+            android:id="@+id/lsvw_chat_00"
+            android:divider="@null"
+            android:layout_above="@+id/rvle_message_00"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+        <RelativeLayout
+            android:id="@+id/rvle_message_00"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:layout_marginBottom="@dimen/size_10dp"
+            android:layout_width="match_parent"
+            android:paddingLeft="@dimen/size_5dp"
+            android:paddingRight="@dimen/size_5dp"
+            android:layout_height="@dimen/size_50dp">
+
+            <EditText
+                android:id="@+id/edtx_message_00"
+                android:paddingLeft="@dimen/size_10dp"
+                android:paddingRight="@dimen/size_10dp"
+                android:layout_width="wrap_content"
+                android:textSize="@dimen/size_14sp"
+                android:layout_height="@dimen/size_45dp"
+                android:background="@drawable/editext_message"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:hint="Message"
+                android:layout_toLeftOf="@+id/rvly_send_00"
+                android:inputType="textPersonName" />
+
+            <RelativeLayout
+                android:id="@+id/rvly_send_00"
+                android:layout_width="@dimen/size_45dp"
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:background="@drawable/button_send"
+                android:layout_height="@dimen/size_45dp"
+                android:layout_alignBottom="@+id/edtx_message_00"
+                android:layout_alignParentEnd="true">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_width="@dimen/size_45dp"
+                    android:layout_height="@dimen/size_45dp"
+                    android:layout_centerVertical="true"
+                    app:srcCompat="@drawable/ic_send" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

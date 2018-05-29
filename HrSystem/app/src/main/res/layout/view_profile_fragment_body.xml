@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="@dimen/size_10dp"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/text_arsenal_blue_00"
+                android:gravity="right"
+                android:background="@color/white_00"
+                android:textSize="@dimen/size_16sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/self_info" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <g.rezza.moch.hrsystem.component.TextKeyValueView
+                    android:id="@+id/edtx_pob_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <g.rezza.moch.hrsystem.component.TextKeyValueView
+                    android:id="@+id/edtx_dob_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <g.rezza.moch.hrsystem.component.TextKeyValueView
+                    android:id="@+id/edtx_address_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <g.rezza.moch.hrsystem.component.TextKeyValueView
+                    android:id="@+id/edtx_gender_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/text_arsenal_blcak_00"
+                android:background="@color/white_00"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:gravity="right"
+                android:textSize="@dimen/size_16sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/contact_info" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <g.rezza.moch.hrsystem.component.TextKeyValueView
+                    android:id="@+id/edtx_selfmail_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <g.rezza.moch.hrsystem.component.TextKeyValueView
+                    android:id="@+id/edtx_phone1_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <g.rezza.moch.hrsystem.component.TextKeyValueView
+                    android:id="@+id/edtx_phone2_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <RelativeLayout
+                    android:id="@+id/bbtn_save_00"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:background="@drawable/button_orange"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_35dp">
+
+                    <TextView
+                        android:layout_marginTop="@dimen/size_10dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        style="@style/text_arsenal_white_00"
+                        android:textSize="@dimen/size_16sp"
+                        android:text="@string/save" />
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

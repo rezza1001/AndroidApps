@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingTop="@dimen/size_10dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/lnly_created_00"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="@string/by"
+            android:layout_marginRight="@dimen/size_5dp"
+            android:textStyle="normal"
+            android:textSize="@dimen/size_16sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txvw_create_by_00"
+            android:text="hrvclubindonesia"
+            android:textColor="@color/text_black"
+            android:fontFamily="@font/open_sans"
+            android:textSize="@dimen/size_16sp"
+            android:layout_marginRight="@dimen/size_20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/txvw_create_date_00"
+            android:text="Apr 19, 2017"
+            android:textColor="@color/text_black"
+            android:textSize="@dimen/size_16sp"
+            android:fontFamily="@font/open_sans"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txvw_subject_00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/lnly_created_00"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:fontFamily="@font/open_sans"
+        android:text="HR-V Club Indonesia (HCI) Chapter DeBoRa Audiensi dengan Walikota Bogor"
+        android:textColor="@color/text_black"
+        android:textSize="@dimen/size_20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txvw_body_00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txvw_subject_00"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:fontFamily="@font/alike"
+        android:lineSpacingMultiplier="1.5"
+        android:text="Bertempat di balai kota Bogor, HR-V Club Indonesia (HCI) Chapter DeBoRa yang secara resmi di deklarasikan pada tanggal 19 April 2016"
+        android:textSize="@dimen/size_16sp" />
+    
+    <Button
+        android:id="@+id/bbtn_more_00"
+        android:text="@string/button_readmore"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:layout_marginBottom="@dimen/size_20dp"
+        android:textSize="@dimen/size_16sp"
+        android:textColor="@color/white"
+        android:layout_below="@+id/txvw_body_00"
+        android:background="@drawable/button_red"
+        android:layout_width="@dimen/size_130dp"
+        android:layout_height="@dimen/size_40dp" />
+
+</RelativeLayout>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3ea266</color>
+    <color name="colorPrimaryDark">#3ea266</color>
+    <color name="colorAccent">#ffffff</color>
+
+    <color name="white">#ffffff</color>
+    <color name="grey">#f0f1f3</color>
+    <color name="grey_dark">#D7D8DB</color>
+    <color name="green">#3ea266</color>
+    <color name="petal">#f98866</color>
+    <color name="black">#1c1c1c</color>
+    <color name="text_black">#1c1c1c</color>
+    <color name="button_red">#db2723</color>
+    <color name="button_red_click">#ce3737</color>
+</resources>
