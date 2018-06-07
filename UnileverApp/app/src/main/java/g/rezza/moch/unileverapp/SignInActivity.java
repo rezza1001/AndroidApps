@@ -31,6 +31,7 @@ public class SignInActivity extends AppCompatActivity {
     private EditText    edtx_password_00;
     private GPSTracker  gpsTracker;
     private TextView    txvw_join_00;
+    private TextView    txvw_forgot_01;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,7 @@ public class SignInActivity extends AppCompatActivity {
         edtx_username_00    = (EditText) findViewById(R.id.edtx_username_00);
         edtx_password_00    = (EditText) findViewById(R.id.edtx_password_00);
         txvw_join_00        = (TextView) findViewById(R.id.txvw_join_00);
+        txvw_forgot_01       = (TextView) findViewById(R.id.txvw_forgot_01);
 
 //        edtx_password_00.setText("Zahra2018");
 //        edtx_username_00.setText("zahra");
@@ -67,7 +69,13 @@ public class SignInActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(SignInActivity.this, RegisterActivity.class);
                 startActivity(intent);
-                SignInActivity.this.finish();
+            }
+        });
+
+        txvw_forgot_01.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(SignInActivity.this, ForgotPwdActivity.class));
             }
         });
     }
@@ -84,7 +92,7 @@ public class SignInActivity extends AppCompatActivity {
         Log.d("TAG", longitude +" | "+ latitude);
 
         if (username.isEmpty()){
-            Toast.makeText(SignInActivity.this, getResources().getString(R.string.username) + " is Empty", Toast.LENGTH_SHORT).show();
+            Toast.makeText(SignInActivity.this, getResources().getString(R.string.email) + " is Empty", Toast.LENGTH_SHORT).show();
             return;
         }
         else if (password.isEmpty()){

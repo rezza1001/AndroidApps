@@ -4,15 +4,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ScrollView;
 
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,17 +18,8 @@ import java.util.HashMap;
 import g.rezza.moch.unileverapp.ProductActivity;
 import g.rezza.moch.unileverapp.R;
 import g.rezza.moch.unileverapp.adapter.MenuGridAdapter;
-import g.rezza.moch.unileverapp.connection.PostManager;
 import g.rezza.moch.unileverapp.database.BrandDB;
-import g.rezza.moch.unileverapp.database.ChartDB;
-import g.rezza.moch.unileverapp.database.ProductDB;
-import g.rezza.moch.unileverapp.fragment.HomeFragment;
-import g.rezza.moch.unileverapp.fragment.ProductOrderFragment;
-import g.rezza.moch.unileverapp.fragment.SalesOrderFragment;
-import g.rezza.moch.unileverapp.holder.KeyValueHolder;
 import g.rezza.moch.unileverapp.holder.MenuGridHolder;
-import g.rezza.moch.unileverapp.holder.ProductHolder;
-import g.rezza.moch.unileverapp.lib.ErrorCode;
 import g.rezza.moch.unileverapp.lib.ScrollableGridView;
 
 /**
@@ -40,12 +29,11 @@ import g.rezza.moch.unileverapp.lib.ScrollableGridView;
 public class HomeMainFragment extends Fragment {
     private static final String TAG = "HomeMainFragment";
 
-    private ScrollableGridView grvw_data_10;
-    private ScrollableGridView grvw_special_10;
-    private MenuGridAdapter adapter;
-    private MenuGridAdapter adapter_special;
+    private ScrollableGridView  grvw_data_10;
+    private MenuGridAdapter     adapter;
+    private ImageView           imvw_banner_00;
+    private ScrollView          scvw_body_00;
     private ArrayList<MenuGridHolder> list = new ArrayList<>();
-    private ArrayList<MenuGridHolder> list_special = new ArrayList<>();
 
     public static Fragment newInstance() {
         Fragment frag   = new HomeMainFragment();
@@ -59,9 +47,9 @@ public class HomeMainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view       = inflater.inflate(R.layout.fragment_home_main, container, false);
         grvw_data_10    = view.findViewById(R.id.grvw_data_10);
-        grvw_special_10 = view.findViewById(R.id.grvw_special_10);
         adapter         = new MenuGridAdapter(getActivity(), list);
-        adapter_special = new MenuGridAdapter(getActivity(), list_special);
+        imvw_banner_00  = view.findViewById(R.id.imvw_banner_00);
+        scvw_body_00    = view.findViewById(R.id.scvw_body_00);
         return view;
     }
 
@@ -69,8 +57,9 @@ public class HomeMainFragment extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         grvw_data_10.setAdapter(adapter);
-        grvw_special_10.setAdapter(adapter_special);
         createData();
+        scvw_body_00.smoothScrollTo(0,0);
+        Glide.with(getActivity()).load("http://202.154.3.188/commerce/production/uploads/AD-0000010.jpeg").into(imvw_banner_00);
     }
 
     @Override
@@ -99,25 +88,6 @@ public class HomeMainFragment extends Fragment {
 
         // SPECIAL
 
-        {
-            MenuGridHolder menu = new MenuGridHolder();
-            menu.id = "dove";
-            menu.image = "https://www.unilever.co.id/id/Images/dove_tcm1310-408752_w198.png";
-            list_special.add(menu);
-        }
-        {
-            MenuGridHolder menu = new MenuGridHolder();
-            menu.id = "axe";
-            menu.image = "https://www.unilever.co.id/id/Images/axe_tcm1310-408738_w198.jpg";
-            list_special.add(menu);
-        }
-        {
-            MenuGridHolder menu = new MenuGridHolder();
-            menu.id = "citra";
-            menu.image = "https://www.unilever.co.id/id/Images/citra-280x280_tcm1310-467847_w198.jpg";
-            list_special.add(menu);
-        }
-        adapter_special.notifyDataSetChanged();
     }
 
     private void registerListener(){

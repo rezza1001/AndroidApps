@@ -31,6 +31,49 @@
             android:scaleType="fitCenter"
             app:srcCompat="@drawable/unilever_icon_01" />
 
+
+        <RelativeLayout
+            android:id="@+id/rvly_notif_00"
+            android:layout_width="@dimen/size_65dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_gravity="center"
+            android:layout_toStartOf="@+id/rvly_cart_00">
+
+            <RelativeLayout
+                android:id="@+id/rvly_notif_counter_00"
+                android:layout_width="@dimen/size_22dp"
+                android:layout_height="@dimen/size_22dp"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginRight="@dimen/size_4dp"
+                android:layout_marginTop="@dimen/size_4dp"
+                android:background="@drawable/background_oval_orange">
+
+                <TextView
+                    android:id="@+id/txvw_notif_00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="sans-serif"
+                    android:text="0"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/size_14sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <ImageView
+                android:id="@+id/imvw_notif_00"
+                android:layout_width="@dimen/size_46dp"
+                android:layout_height="@dimen/size_46dp"
+                android:layout_centerInParent="true"
+                android:paddingRight="@dimen/size_10dp"
+                app:srcCompat="@drawable/ic_notifications" />
+
+
+        </RelativeLayout>
+
         <RelativeLayout
             android:id="@+id/rvly_cart_00"
             android:layout_width="@dimen/size_65dp"

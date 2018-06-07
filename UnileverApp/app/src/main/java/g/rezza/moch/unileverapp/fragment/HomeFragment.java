@@ -12,6 +12,7 @@ import android.widget.FrameLayout;
 
 import g.rezza.moch.unileverapp.R;
 import g.rezza.moch.unileverapp.fragment.home.HomeMainFragment;
+import g.rezza.moch.unileverapp.fragment.home.InvoiceFragment;
 import g.rezza.moch.unileverapp.fragment.home.MyOrderFragment;
 import g.rezza.moch.unileverapp.fragment.home.ProfileFragment;
 import it.sephiroth.android.library.bottomnavigation.BottomNavigation;
@@ -25,8 +26,9 @@ public class HomeFragment extends Fragment implements BottomNavigation.OnMenuIte
     private BottomNavigation navigation;
     private FrameLayout container;
 
-    public static final int PRODUCT         = 1001;
-    public static final int PRODUCT_ORDER   = 1002;
+    public static final int PRODUCT_ORDER   = R.id.menu_myorder;
+    public static final int INVOICE         = R.id.menu_invoice;
+    public static final int PROFILE         = R.id.menu_profile;
 
     public static Fragment newInstance(int position) {
         Fragment frag   = new HomeFragment();
@@ -83,25 +85,26 @@ public class HomeFragment extends Fragment implements BottomNavigation.OnMenuIte
 
         switch (i){
             case R.id.menu_home:
+                navigation.setSelectedIndex(0, true);
                 fragment = HomeMainFragment.newInstance();
                 fragmentTransaction.replace(container.getId(), fragment,"main_home");
                 break;
             case R.id.menu_myorder:
+                navigation.setSelectedIndex(1, true);
                 fragment = MyOrderFragment.newInstance();
                 fragmentTransaction.replace(container.getId(), fragment,"my_order");
                 break;
+            case R.id.menu_invoice:
+                navigation.setSelectedIndex(2, true);
+                fragment = InvoiceFragment.newInstance();
+                fragmentTransaction.replace(container.getId(), fragment,"invoice");
+                break;
             case R.id.menu_profile:
+                navigation.setSelectedIndex(3, true);
                 fragment = ProfileFragment.newInstance();
                 fragmentTransaction.replace(container.getId(), fragment,"main_profile");
                 break;
-            case PRODUCT:
-                fragment = ProductFragment.newInstance();
-                fragmentTransaction.replace(container.getId(), fragment,"main_product");
-                break;
-            case PRODUCT_ORDER:
-                fragment = MyOrderFragment.newInstance();
-                fragmentTransaction.replace(container.getId(), fragment,"my_order");
-                break;
+
             default:
 //                clearFrg();
                 fragment = HomeMainFragment.newInstance();

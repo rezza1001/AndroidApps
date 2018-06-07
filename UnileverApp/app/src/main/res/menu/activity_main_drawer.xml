@@ -7,43 +7,46 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_home"
-            android:title="Home" />
+            android:title="@string/home" />
         <item
+            android:visible="false"
             android:id="@+id/nav_category"
             android:icon="@drawable/ic_category"
             android:title="Shopping Category" />
         <item
             android:id="@+id/nav_myorder"
             android:icon="@drawable/ic_order"
-            android:title="My Order" />
+            android:title="@string/order" />
         <item
             android:id="@+id/nav_invoice"
             android:icon="@drawable/ic_invoice"
-            android:title="My Invoice" />
-        <item
-            android:id="@+id/nav_point"
-            android:icon="@drawable/ic_reward"
-            android:title="Reward Point" />
+            android:title="@string/invoice" />
+        <!--<item-->
+            <!--android:id="@+id/nav_point"-->
+            <!--android:icon="@drawable/ic_reward"-->
+            <!--android:title="Reward Point" />-->
     </group>
 
     <item android:title="">
         <menu>
             <item
+                android:visible="false"
                 android:id="@+id/nav_help"
                 android:icon="@drawable/ic_help_outline"
                 android:title="I Need help" />
             <item
                 android:id="@+id/nav_care"
+                android:visible="false"
                 android:icon="@drawable/ic_care"
                 android:title="24/7 Customer Care" />
             <item
                 android:id="@+id/nav_profile"
                 android:icon="@drawable/ic_profile"
-                android:title="Profile" />
+                android:title="@string/profile" />
             <item
                 android:id="@+id/nav_logout"
                 android:icon="@drawable/ic_sign_out"
-                android:title="Logout" />
+                android:title="@string/sign_out" />
         </menu>
     </item>
 

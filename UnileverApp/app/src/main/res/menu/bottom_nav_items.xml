@@ -16,17 +16,17 @@
         />
     <item
         android:id="@+id/menu_myorder"
-        android:title="My Order"
+        android:title="Pesanan"
         android:icon="@mipmap/ic_order"
         />
     <item
-        android:id="@+id/menu_point"
-        android:title="My Invoice"
+        android:id="@+id/menu_invoice"
+        android:title="Tagihan"
         android:icon="@mipmap/ic_order"
         />
     <item
         android:id="@+id/menu_profile"
-        android:title="Profile"
+        android:title="Profil"
         android:icon="@mipmap/ic_profile"
         />
 

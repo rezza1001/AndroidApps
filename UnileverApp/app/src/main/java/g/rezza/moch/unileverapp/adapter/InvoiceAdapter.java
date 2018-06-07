@@ -43,22 +43,26 @@ public class InvoiceAdapter extends ArrayAdapter<InvoiceOrderHolder> {
             holder = new Holder();
             holder.txvw_date_00         = (TextView)  convertView.findViewById(R.id.txvw_date_00);
             holder.txvw_orderid_00      = (TextView)  convertView.findViewById(R.id.txvw_orderid_00);
+            holder.txvw_invoice_00      = (TextView)  convertView.findViewById(R.id.txvw_invoice_00);
+            holder.txvw_status_00       = (TextView)  convertView.findViewById(R.id.txvw_status_00);
             convertView.setTag(holder);
         } else {
             holder = (Holder) convertView.getTag();
         }
 
         Calendar calendar = Calendar.getInstance();
-        SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        SimpleDateFormat format2 = new SimpleDateFormat("dd MMM YYYY, HH:mm:ss ");
+        SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd");
+        SimpleDateFormat format2 = new SimpleDateFormat("dd MMM yyyy");
         try {
-            calendar.setTime(format1.parse(Event.date));
+            calendar.setTime(format1.parse(Event.invoice_date));
         } catch (ParseException e) {
             e.printStackTrace();
         }
 
         holder.txvw_date_00.setText(format2.format(calendar.getTime()));
-        holder.txvw_orderid_00.setText(Event.id);
+        holder.txvw_orderid_00.setText(Event.order_id);
+        holder.txvw_invoice_00.setText(Event.invoice_id);
+        holder.txvw_status_00.setText(Event.order_status);
 
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,7 +79,9 @@ public class InvoiceAdapter extends ArrayAdapter<InvoiceOrderHolder> {
     /** View holder for the views we need access to */
     private static class Holder {
         public TextView txvw_orderid_00;
+        public TextView txvw_invoice_00;
         public TextView txvw_date_00;
+        public TextView txvw_status_00;
 
     }
 

@@ -1,8 +1,6 @@
 package g.rezza.moch.unileverapp;
 
 import android.content.Intent;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -16,7 +14,6 @@ import android.widget.Toast;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 
@@ -26,8 +23,6 @@ import g.rezza.moch.unileverapp.database.ChartDB;
 import g.rezza.moch.unileverapp.database.OrderDB;
 import g.rezza.moch.unileverapp.database.OutletDB;
 import g.rezza.moch.unileverapp.database.ProductDB;
-import g.rezza.moch.unileverapp.fragment.ProductOrderFragment;
-import g.rezza.moch.unileverapp.fragment.SalesOrderFragment;
 import g.rezza.moch.unileverapp.holder.MyOrderHolder;
 import g.rezza.moch.unileverapp.lib.ErrorCode;
 import g.rezza.moch.unileverapp.lib.Parse;
@@ -44,6 +39,10 @@ public class ChartActivity extends AppCompatActivity {
     private TextView                    txvw_empty_00;
     private TextView                    txvw_counter_00;
     private RelativeLayout              rvly_bottom_00;
+    private TextView                    txvw_notif_00;
+    private Button                      bbtn_close_00;
+    private RelativeLayout              rvly_notif_00;
+    private Double  mCredit = 0.0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,6 +51,7 @@ public class ChartActivity extends AppCompatActivity {
         initLayout();
         initListener();
         initData();
+        checkLimit();
     }
 
     private void initLayout(){
@@ -63,9 +63,13 @@ public class ChartActivity extends AppCompatActivity {
         txvw_empty_00       = (TextView) findViewById(R.id.txvw_empty_00);
         txvw_counter_00     = (TextView) findViewById(R.id.txvw_counter_00);
         rvly_bottom_00      = (RelativeLayout) findViewById(R.id.rvly_bottom_00);
+        rvly_notif_00       = (RelativeLayout) findViewById(R.id.rvly_notif_00);
+        txvw_notif_00       = (TextView) findViewById(R.id.txvw_notif_00);
+        bbtn_close_00       = (Button) findViewById(R.id.bbtn_close_00);
 
         lsvw_order_00.setAdapter(adapter);
         txvw_empty_00.setVisibility(View.GONE);
+        rvly_notif_00.setVisibility(View.GONE);
     }
 
     private void initListener(){
@@ -102,6 +106,18 @@ public class ChartActivity extends AppCompatActivity {
                 processTotal();
             }
         });
+
+        rvly_notif_00.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {}
+        });
+
+        bbtn_close_00.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                rvly_notif_00.setVisibility(View.GONE);
+            }
+        });
     }
 
     @Override
@@ -125,7 +141,7 @@ public class ChartActivity extends AppCompatActivity {
             list.add(holder);
 
         }
-        txvw_counter_00.setText("Bag ("+list.size()+")");
+        txvw_counter_00.setText(getResources().getString(R.string.cart)+" ("+list.size()+")");
         adapter.notifyDataSetChanged();
         processTotal();
     }
@@ -148,73 +164,11 @@ public class ChartActivity extends AppCompatActivity {
             total = total + price;
         }
         txvw_total_00.setText("Rp. "+ Parse.toCurrnecy(total+""));
-        txvw_counter_00.setText("Bag ("+list.size()+")");
+        txvw_total_00.setTag(total+"");
+        txvw_counter_00.setText(getResources().getString(R.string.cart)+" ("+list.size()+")");
     }
 
-    private void sendData(){
-        PostManager post = new PostManager(ChartActivity.this);
-        post.setApiUrl("order/save");
-        JSONObject send = new JSONObject();
-        try {
-            OutletDB outletDB = new OutletDB();
-            outletDB.getMine(ChartActivity.this);
 
-            send.put("request_type","7");
-            JSONObject data = new JSONObject();
-
-            JSONObject order_info = new JSONObject();
-            order_info.put("username", outletDB.username);
-            order_info.put("outlet_id", outletDB.outlet_id);
-            order_info.put("order_disc", "0");
-            order_info.put("order_pay_type", "Bank Transfer");
-            order_info.put("order_notes", "");
-            data.put("order_info",order_info);
-
-            JSONArray product_info = new JSONArray(getDetialOrder());
-            data.put("order_detail", product_info);
-
-            send.put("data",data);
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        post.setData(send);
-        post.execute("POST");
-        post.setOnReceiveListener(new PostManager.onReceiveListener() {
-            @Override
-            public void onReceive(JSONObject obj, int code, String message) {
-                if (code == ErrorCode.OK){
-                    OrderDB orderDB = new OrderDB();
-                    orderDB.order_pay_type = "Bank Transfer";
-                    orderDB.order_detail = getDetialOrder();
-                    try {
-                        orderDB.id          = obj.getString("order_id");
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-                    orderDB.insert(ChartActivity.this);
-
-                    ChartDB chartDB = new ChartDB();
-                    chartDB.clearData(ChartActivity.this);
-
-                    Intent intent = new Intent(ChartActivity.this, SummaryOrderActivity.class);
-                    intent.putExtra("ORDERID",orderDB.id);
-                    startActivityForResult(intent, 1);
-                    ChartActivity.this.finish();
-
-//                    FragmentTransaction fragmentTransaction = ChartActivity.this.getSupportFragmentManager().beginTransaction();
-//                    Fragment fragment = SalesOrderFragment.newInstance(orderDB.id);
-//                    fragmentTransaction.replace(ProductOrderFragment.this.getId(), fragment,"sales_order");
-//                    fragmentTransaction.detach(fragment);
-//                    fragmentTransaction.attach(fragment);
-//                    fragmentTransaction.commit();
-                    Toast.makeText(ChartActivity.this, message, Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    Toast.makeText(ChartActivity.this, message, Toast.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
 
     private String getDetialOrder(){
         ChartDB chartDB = new ChartDB();
@@ -239,5 +193,71 @@ public class ChartActivity extends AppCompatActivity {
         return product_info.toString();
     }
 
+    private void checkLimit(){
+        OutletDB outletDB = new OutletDB();
+        outletDB.getMine(this);
+        PostManager post = new PostManager(this);
+        post.setApiUrl("/Order/credit_limit_check/outletId/"+outletDB.outlet_id);
+        post.execute("GET");
+        post.setOnReceiveListener(new PostManager.onReceiveListener() {
+            @Override
+            public void onReceive(JSONObject obj, int code, String message) {
+                if (code == ErrorCode.OK){
+                    try {
+                        txvw_notif_00.setText("Total pembelian anda sudah melebihi batas kredit "+
+                                obj.getString("total_credit_limit"));
+                        mCredit = Double.parseDouble(obj.getString("total_credit_limit"));
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else {
+                    Toast.makeText(ChartActivity.this, message, Toast.LENGTH_SHORT).show();
+                    ChartActivity.this.finish();
+                }
+            }
+        });
+    }
+
+    private void sendData(){
+        double total = Double.parseDouble(txvw_total_00.getTag().toString());
+//        mCredit = 2000000.0;
+        if (mCredit <  total){
+            rvly_notif_00.setVisibility(View.VISIBLE);
+            return;
+        }
+
+        PostManager post = new PostManager(this);
+        post.setApiUrl("/Order/discount_check/order_subtotal/"+txvw_total_00.getTag().toString());
+        post.execute("GET");
+        post.setOnReceiveListener(new PostManager.onReceiveListener() {
+            @Override
+            public void onReceive(JSONObject obj, int code, String message) {
+                String discount = "0";
+                if (code == ErrorCode.OK){
+                    try {
+                         discount = obj.getString("discount_calc");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else {
+                    Toast.makeText(ChartActivity.this, message, Toast.LENGTH_SHORT).show();
+                }
+
+                OrderDB orderDB = new OrderDB();
+                orderDB.clearData(ChartActivity.this);
+                orderDB.order_disc = Double.parseDouble(discount);
+                orderDB.order_pay_type = "-";
+                orderDB.order_detail = getDetialOrder();
+                orderDB.insert(ChartActivity.this);
+
+                Intent intent = new Intent(ChartActivity.this, PaymentActivity.class);
+                intent.putExtra("ORDER_ID", "-99");
+                startActivity(intent);
+                ChartActivity.this.finish();
+            }
+        });
+    }
 
 }

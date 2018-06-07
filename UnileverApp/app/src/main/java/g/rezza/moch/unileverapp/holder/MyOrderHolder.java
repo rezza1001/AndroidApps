@@ -14,7 +14,7 @@ public class MyOrderHolder {
 
     public ArrayList<Integer> getQtys(){
         qtys.clear();
-        for (int i=1; i<=max_qty; i++){
+        for (int i=3; i<=max_qty; i++){
             qtys.add(i);
         }
         return qtys;

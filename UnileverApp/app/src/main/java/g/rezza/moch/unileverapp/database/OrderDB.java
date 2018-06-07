@@ -14,12 +14,16 @@ import g.rezza.moch.unileverapp.connection.Database;
 
 public class OrderDB {
 
-    public String   id              = "";
+    public String   id              = "-99";
     public double   order_disc      = 0;
     public String   order_notes     = "";
     public String   order_pay_type  = "";
     public String   order_detail    = "";
     public String   created_at      = "";
+    public String   order_date      = "";
+    public String   order_subtotal      = "";
+    public String   order_total      = "";
+    public String   outlet_credit_limit      = "";
 
 
     public static final String TAG   = "OrderDB";
@@ -30,6 +34,10 @@ public class OrderDB {
     public static final String FIELD_NOTE           = "order_notes";
     public static final String FIELD_PAY_TYPE       = "order_pay_type";
     public static final String FIELD_DETAIL         = "order_detail";
+    public static final String FIELD_ORDER_DATE     = "order_date";
+    public static final String FIELD_SUBTOTAL       = "order_subtotal";
+    public static final String FIELD_CREDIT_LIMIT   = "outlet_credit_limit";
+    public static final String FIELD_TOTAL          = "order_total";
     public static final String FIELD_CREATED_AT     = "created_at";
 
 
@@ -41,6 +49,10 @@ public class OrderDB {
                 " " + FIELD_DISCOUNT    + " varchar(50) default '0'," +
                 " " + FIELD_NOTE    + " varchar(255) NULL," +
                 " " + FIELD_PAY_TYPE    + " varchar(255) NULL," +
+                " " + FIELD_ORDER_DATE    + " varchar(255) NULL," +
+                " " + FIELD_SUBTOTAL    + " varchar(255) NULL," +
+                " " + FIELD_CREDIT_LIMIT    + " varchar(255) NULL," +
+                " " + FIELD_TOTAL    + " varchar(255) NULL," +
                 " " + FIELD_DETAIL    + " text NULL," +
                 " " + FIELD_CREATED_AT    + " datetime  ,"+
                 "  PRIMARY KEY (" + FIELD_ID +"))";
@@ -55,6 +67,10 @@ public class OrderDB {
         contentValues.put(FIELD_NOTE, order_notes);
         contentValues.put(FIELD_PAY_TYPE, order_pay_type);
         contentValues.put(FIELD_DETAIL, order_detail);
+        contentValues.put(FIELD_SUBTOTAL, order_subtotal);
+        contentValues.put(FIELD_CREDIT_LIMIT, outlet_credit_limit);
+        contentValues.put(FIELD_ORDER_DATE, order_date);
+        contentValues.put(FIELD_TOTAL, order_total);
         contentValues.put(FIELD_CREATED_AT, new SimpleDateFormat("yyyy-MM-dd HH:mm:ss").format(new Date()));
 
         return contentValues;
@@ -121,6 +137,7 @@ public class OrderDB {
                 prod.order_notes    = res.getString(res.getColumnIndex(FIELD_NOTE));
                 prod.order_pay_type = res.getString(res.getColumnIndex(FIELD_PAY_TYPE));
                 prod.order_detail   = res.getString(res.getColumnIndex(FIELD_DETAIL));
+                prod.outlet_credit_limit   = res.getString(res.getColumnIndex(FIELD_CREDIT_LIMIT));
                 prod.created_at     = res.getString(res.getColumnIndex(FIELD_CREATED_AT));
                 list.add(prod);
             }
@@ -148,6 +165,10 @@ public class OrderDB {
                 this.order_pay_type = res.getString(res.getColumnIndex(FIELD_PAY_TYPE));
                 this.order_detail   = res.getString(res.getColumnIndex(FIELD_DETAIL));
                 this.created_at     = res.getString(res.getColumnIndex(FIELD_CREATED_AT));
+                this.order_subtotal = res.getString(res.getColumnIndex(FIELD_SUBTOTAL));
+                this.order_total    = res.getString(res.getColumnIndex(FIELD_TOTAL));
+                this.order_date     = res.getString(res.getColumnIndex(FIELD_ORDER_DATE));
+                this.outlet_credit_limit     = res.getString(res.getColumnIndex(FIELD_CREDIT_LIMIT));
             }
             pDB.close();
         }catch (Exception e){

@@ -23,7 +23,7 @@ public class Database extends SQLiteOpenHelper {
     public static final String TAG = "RZ Database";
 
     public static final String DATABASE_NAME = "UNILEVER.db";
-    private static final int DB_VERSION      =6;
+    private static final int DB_VERSION      = 7;
 
     private HashMap hp;
     public Database(Context contex) {
@@ -50,7 +50,7 @@ public class Database extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         Log.d(TAG,"VERSION  "+ oldVersion + " <> "+ newVersion);
         switch (newVersion){
-            case 6:
+            case 7:
                 onCreate(db);
                 break;
         }

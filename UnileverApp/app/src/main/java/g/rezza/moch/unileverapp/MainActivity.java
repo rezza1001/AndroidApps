@@ -2,12 +2,9 @@ package g.rezza.moch.unileverapp;
 
 import android.content.Intent;
 import android.content.res.ColorStateList;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
 import android.util.Log;
@@ -31,17 +28,13 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 
 import g.rezza.moch.unileverapp.connection.PostManager;
 import g.rezza.moch.unileverapp.database.BrandDB;
 import g.rezza.moch.unileverapp.database.ChartDB;
 import g.rezza.moch.unileverapp.database.OrderDB;
 import g.rezza.moch.unileverapp.database.OutletDB;
-import g.rezza.moch.unileverapp.database.ProductDB;
 import g.rezza.moch.unileverapp.fragment.HomeFragment;
-import g.rezza.moch.unileverapp.fragment.InvoiceFragment;
-import g.rezza.moch.unileverapp.holder.MenuGridHolder;
 import g.rezza.moch.unileverapp.lib.ErrorCode;
 import g.rezza.moch.unileverapp.lib.LoadingScreen;
 
@@ -130,14 +123,14 @@ public class MainActivity extends AppCompatActivity
     @Override
     protected void onStart() {
         super.onStart();
-
+//        onNavigationItemSelected(navigationView.getMenu().getItem(0));
     }
 
     @Override
     protected void onResume() {
         super.onResume();
         Log.d("HOME", "RESUME");
-        onNavigationItemSelected(navigationView.getMenu().getItem(0));
+//        onNavigationItemSelected(navigationView.getMenu().getItem(0));
 
         ChartDB chartDBCounter = new ChartDB();
         ArrayList<ChartDB> carts = chartDBCounter.getProducts(this);
@@ -182,14 +175,19 @@ public class MainActivity extends AppCompatActivity
             fragment = HomeFragment.newInstance(R.id.menu_home);
             fragmentTransaction.replace(container.getId(), fragment,"Home");
         }
-        else if (id == R.id.nav_category) {
+        else if (id == R.id.nav_invoice){
             getSupportActionBar().setTitle("");
-            fragment = HomeFragment.newInstance(HomeFragment.PRODUCT);
+            fragment = HomeFragment.newInstance(HomeFragment.INVOICE);
             fragmentTransaction.replace(container.getId(), fragment,"Home");
         }
         else if (id == R.id.nav_myorder) {
             getSupportActionBar().setTitle("");
             fragment = HomeFragment.newInstance(HomeFragment.PRODUCT_ORDER);
+            fragmentTransaction.replace(container.getId(), fragment,"Home");
+        }
+        else if (id == R.id.nav_profile) {
+            getSupportActionBar().setTitle("");
+            fragment = HomeFragment.newInstance(HomeFragment.PROFILE);
             fragmentTransaction.replace(container.getId(), fragment,"Home");
         }
         else if (id == R.id.nav_logout) {
@@ -246,8 +244,13 @@ public class MainActivity extends AppCompatActivity
                 else {
                     Toast.makeText(MainActivity.this, message,Toast.LENGTH_SHORT).show();
                 }
+
+                onNavigationItemSelected(navigationView.getMenu().getItem(0));
             }
+
         });
+
+
     }
 
     private void logout(){

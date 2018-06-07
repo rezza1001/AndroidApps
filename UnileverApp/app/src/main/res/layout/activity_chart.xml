@@ -36,7 +36,7 @@
             android:textStyle="bold"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Bag (2)" />
+            android:text="@string/cart" />
     </LinearLayout>
     <RelativeLayout
         android:layout_below="@+id/lnly_header_00"
@@ -124,5 +124,62 @@
 
         </RelativeLayout>
 
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rvly_notif_00"
+        android:background="@color/black_40"
+        android:padding="@dimen/size_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_centerInParent="true"
+            android:background="@drawable/background_round_white"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_200dp">
+
+            <TextView
+                android:id="@+id/txvw_title_11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/black"
+                android:textSize="@dimen/size_16sp"
+                android:text="Notifikasi" />
+            <RelativeLayout
+                android:id="@+id/rvly_sparator_00"
+                android:layout_below="@+id/txvw_title_11"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:layout_marginLeft="@dimen/size_2dp"
+                android:layout_marginRight="@dimen/size_2dp"
+                android:background="@color/grey"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"/>
+            <TextView
+                android:id="@+id/txvw_notif_00"
+                android:layout_below="@+id/rvly_sparator_00"
+                android:text="Total pembelian anda sudah melebihi batas "
+                android:textSize="@dimen/size_16sp"
+                android:fontFamily="sans-serif"
+                android:textAlignment="center"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:layout_marginLeft="@dimen/size_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+            <Button
+                android:id="@+id/bbtn_close_00"
+                android:text="@string/close_2"
+                android:background="@drawable/button_disable"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="@dimen/size_4dp"
+                android:layout_marginRight="@dimen/size_1dp"
+                android:layout_marginLeft="@dimen/size_1dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40dp" />
+        </RelativeLayout>
     </RelativeLayout>
 </RelativeLayout>

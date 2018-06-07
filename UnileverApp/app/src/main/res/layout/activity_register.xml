@@ -16,13 +16,23 @@
         android:padding="@dimen/size_10dp"
         android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/imvw_back_00"
+            android:src="@drawable/ic_arrow_back"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/size_30dp" />
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="@dimen/size_22sp"
-            android:textColor="@color/white"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_toEndOf="@+id/imvw_back_00"
             android:fontFamily="sans-serif"
-            android:text="@string/register" />
+            android:text="@string/register"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_22sp" />
     </RelativeLayout>
 
     <ScrollView
@@ -145,6 +155,47 @@
                 android:layout_marginBottom="@dimen/size_10dp"
                 android:hint="@string/term_of_payment" />
 
+            <EditText
+                android:id="@+id/edtx_npwp_00"
+                android:textSize="@dimen/size_14sp"
+                android:background="@drawable/editext_custom_03"
+                android:padding="@dimen/size_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50dp"
+                android:inputType="number"
+                android:maxLength="30"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:hint="@string/npwp" />
+
+
+            <EditText
+                android:id="@+id/edtx_npwp_address_00"
+                android:textSize="@dimen/size_14sp"
+                android:background="@drawable/editext_custom_03"
+                android:padding="@dimen/size_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_80dp"
+                android:inputType="textMultiLine"
+                android:maxLines="5"
+                android:gravity="top"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:hint="@string/npwp_address" />
+
+            <EditText
+                android:id="@+id/edtx_nik_00"
+                android:textSize="@dimen/size_14sp"
+                android:background="@drawable/editext_custom_03"
+                android:padding="@dimen/size_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50dp"
+                android:inputType="number"
+                android:maxLength="30"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:hint="@string/nik" />
+
             <RelativeLayout
                 android:background="@color/colorPrimary"
                 android:layout_width="match_parent"
@@ -189,6 +240,7 @@
                 android:layout_marginTop="@dimen/size_5dp"
                 android:layout_marginBottom="@dimen/size_10dp"
                 android:hint="@string/confirm_password" />
+
 
             <Button
                 android:id="@+id/bbtn_action_00"

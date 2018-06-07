@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:fontFamily="@font/aclonica"
-        android:text="@string/lets_order_now" />
+        android:text="@string/empty_invoice" />
 
     <ListView
         android:id="@+id/lsvw_invoice_00"

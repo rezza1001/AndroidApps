@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 import org.json.JSONException;
@@ -31,6 +32,7 @@ public class RegisterActivity extends AppCompatActivity {
     private static int RESULT_CROP = 2;
 
     private CircleImageView imvw_profile_00;
+    private ImageView       imvw_back_00;
     private EditText        edtx_name_00;
     private EditText        edtx_contact_00;
     private EditText        edtx_address_00;
@@ -41,6 +43,9 @@ public class RegisterActivity extends AppCompatActivity {
     private EditText        edtx_username_00;
     private EditText        edtx_password_00;
     private EditText        edtx_cpassword_00;
+    private EditText        edtx_npwp_00;
+    private EditText        edtx_npwp_address_00;
+    private EditText        edtx_nik_00;
     private Button          bbtn_action_00;
 
     @Override
@@ -63,7 +68,11 @@ public class RegisterActivity extends AppCompatActivity {
         edtx_username_00    = (EditText)    findViewById(R.id.edtx_username_00);
         edtx_password_00    = (EditText)    findViewById(R.id.edtx_password_00);
         edtx_cpassword_00   = (EditText)    findViewById(R.id.edtx_cpassword_00);
+        edtx_npwp_00        = (EditText)    findViewById(R.id.edtx_npwp_00);
+        edtx_nik_00         = (EditText)    findViewById(R.id.edtx_nik_00);
+        edtx_npwp_address_00= (EditText)    findViewById(R.id.edtx_npwp_address_00);
         bbtn_action_00      = (Button)      findViewById(R.id.bbtn_action_00);
+        imvw_back_00        = (ImageView)   findViewById(R.id.imvw_back_00);
     }
 
     private void initListener(){
@@ -78,6 +87,13 @@ public class RegisterActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 sendData();
+            }
+        });
+
+        imvw_back_00.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
     }
@@ -123,6 +139,9 @@ public class RegisterActivity extends AppCompatActivity {
         String username = edtx_username_00.getText().toString();
         String password = edtx_password_00.getText().toString();
         String confirm  = edtx_cpassword_00.getText().toString();
+        String npwp     = edtx_npwp_00.getText().toString();
+        String nik      = edtx_nik_00.getText().toString();
+        String npwp_address      = edtx_npwp_address_00.getText().toString();
 
         if (name.isEmpty()){
             Toast.makeText(RegisterActivity.this, getResources().getString(R.string.name)+ " is Empty", Toast.LENGTH_SHORT).show();
@@ -148,8 +167,8 @@ public class RegisterActivity extends AppCompatActivity {
             Toast.makeText(RegisterActivity.this, getResources().getString(R.string.email)+ " is Empty", Toast.LENGTH_SHORT).show();
             return;
         }
-        else if (term.isEmpty()){
-            Toast.makeText(RegisterActivity.this, getResources().getString(R.string.term_of_payment)+ " is Empty", Toast.LENGTH_SHORT).show();
+        else if (npwp.isEmpty()){
+            Toast.makeText(RegisterActivity.this, getResources().getString(R.string.npwp)+ " is Empty", Toast.LENGTH_SHORT).show();
             return;
         }
         else if (username.isEmpty()){
@@ -186,10 +205,14 @@ public class RegisterActivity extends AppCompatActivity {
             outlet_info.put("outlet_address",address);
             outlet_info.put("outlet_city",city);
             outlet_info.put("outlet_phone",phone);
-            outlet_info.put("outlet_email",email); //?
+            outlet_info.put("outlet_email",email);
+            outlet_info.put("outlet_npwp",npwp);
             outlet_info.put("outlet_photo",""); //?
             outlet_info.put("outlet_term_of_payment",term);
-            outlet_info.put("outlet_credit_limit","300 0000"); //?
+            outlet_info.put("outlet_credit_limit","3000000"); //?
+            outlet_info.put("outlet_nik",nik); //?
+            outlet_info.put("outlet_npwp",npwp); //?
+            outlet_info.put("outlet_npwp_address",npwp_address); //?
             data.put("outlet_info", outlet_info);
 
             send.put("data",data);
@@ -203,9 +226,7 @@ public class RegisterActivity extends AppCompatActivity {
             public void onReceive(JSONObject obj, int code, String message) {
                 if (code == ErrorCode.OK){
                     Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
-                    Intent intent = new Intent(RegisterActivity.this, SignInActivity.class);
-                    startActivity(intent);
-                    RegisterActivity.this.finish();
+                    onBackPressed();
                 }
                 else {
                     Toast.makeText(RegisterActivity.this, message, Toast.LENGTH_SHORT).show();
@@ -214,4 +235,9 @@ public class RegisterActivity extends AppCompatActivity {
         });
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        this.finish();
+    }
 }

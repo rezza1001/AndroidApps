@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import java.util.ArrayList;
@@ -43,6 +44,7 @@ public class ProductOrderAdapter extends ArrayAdapter<MyOrderHolder> {
             holder.imvw_product_00      = (ImageView) convertView.findViewById(R.id.imvw_product_00);
             holder.imvw_remove_00       = (ImageView) convertView.findViewById(R.id.imvw_remove_00);
             holder.spnr_qty_00          = (SimpleSpinner) convertView.findViewById(R.id.spnr_qty_00);
+            holder.rvly_delete_00       = (RelativeLayout) convertView.findViewById(R.id.rvly_delete_00);
             convertView.setTag(holder);
         } else {
             holder = (Holder) convertView.getTag();
@@ -69,7 +71,7 @@ public class ProductOrderAdapter extends ArrayAdapter<MyOrderHolder> {
 
         holder.spnr_qty_00.setValue(Event.qty+"");
 
-        holder.imvw_remove_00.setOnClickListener(new View.OnClickListener() {
+        holder.rvly_delete_00.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 ChartDB chartDB = new ChartDB();
@@ -90,6 +92,7 @@ public class ProductOrderAdapter extends ArrayAdapter<MyOrderHolder> {
         public TextView txvw_description_00;
         public TextView txvw_price_00;
         public SimpleSpinner spnr_qty_00;
+        public RelativeLayout rvly_delete_00;
     }
 
     private afterDeleteListener mListener;

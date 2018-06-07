@@ -14,6 +14,7 @@ import java.util.Calendar;
 
 import g.rezza.moch.unileverapp.R;
 import g.rezza.moch.unileverapp.holder.ListOrderHolder;
+import g.rezza.moch.unileverapp.lib.Parse;
 
 
 /**
@@ -22,7 +23,7 @@ import g.rezza.moch.unileverapp.holder.ListOrderHolder;
 
 public class MyOrderAdapter extends ArrayAdapter<ListOrderHolder> {
 
-    private static String TAG = "InvoiceAdapter";
+    private static String TAG = "MyOrderAdapter";
     private LayoutInflater mInflater;
 
     public MyOrderAdapter(Context context, ArrayList<ListOrderHolder> values) {
@@ -39,7 +40,9 @@ public class MyOrderAdapter extends ArrayAdapter<ListOrderHolder> {
             holder = new Holder();
             holder.txvw_date_00         = (TextView)  convertView.findViewById(R.id.txvw_date_00);
             holder.txvw_orderid_00      = (TextView)  convertView.findViewById(R.id.txvw_orderid_00);
-            holder.txvw_payment_00      = (TextView)  convertView.findViewById(R.id.txvw_payment_00);
+            holder.txvw_status_00       = (TextView)  convertView.findViewById(R.id.txvw_status_00);
+            holder.txvw_total_00        = (TextView)  convertView.findViewById(R.id.txvw_total_00);
+            holder.txvw_discount_00     = (TextView)  convertView.findViewById(R.id.txvw_discount_00);
             convertView.setTag(holder);
         } else {
             holder = (Holder) convertView.getTag();
@@ -47,7 +50,7 @@ public class MyOrderAdapter extends ArrayAdapter<ListOrderHolder> {
 
         Calendar calendar = Calendar.getInstance();
         SimpleDateFormat format1 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        SimpleDateFormat format2 = new SimpleDateFormat("dd MMM YYYY, HH:mm:ss ");
+        SimpleDateFormat format2 = new SimpleDateFormat("dd MMM yyyy HH:mm:ss");
         try {
             calendar.setTime(format1.parse(Event.order_date));
         } catch (ParseException e) {
@@ -56,7 +59,9 @@ public class MyOrderAdapter extends ArrayAdapter<ListOrderHolder> {
 
         holder.txvw_date_00.setText(format2.format(calendar.getTime()));
         holder.txvw_orderid_00.setText(Event.order_id);
-        holder.txvw_payment_00.setText(Event.order_payment_type == "null"?"-":Event.order_payment_type);
+        holder.txvw_status_00.setText(Event.status == "null"?"-":Event.status);
+        holder.txvw_total_00.setText("Rp. "+ Parse.toCurrnecy(Event.total));
+        holder.txvw_discount_00.setText("Rp. "+ Parse.toCurrnecy(Event.discount));
 
         convertView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -74,7 +79,9 @@ public class MyOrderAdapter extends ArrayAdapter<ListOrderHolder> {
     private static class Holder {
         public TextView txvw_orderid_00;
         public TextView txvw_date_00;
-        public TextView txvw_payment_00;
+        public TextView txvw_status_00;
+        public TextView txvw_total_00;
+        public TextView txvw_discount_00;
 
     }
 

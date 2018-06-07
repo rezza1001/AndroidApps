@@ -26,7 +26,7 @@ import java.util.Locale;
  * Created by Rezza on 2/1/2017.
  */
 
-public class GPSTracker extends Service implements LocationListener {
+public class    GPSTracker extends Service implements LocationListener {
 
     private final Context mContext;
 
@@ -220,7 +220,15 @@ public class GPSTracker extends Service implements LocationListener {
 
     @Override
     public void onStatusChanged(String provider, int status, Bundle extras) {
-        Log.d(TAG,"onStatusChanged : " + location.getLongitude());
+        if (location != null){
+            try {
+                Log.d(TAG,"onStatusChanged : " + location.getLongitude());
+            }catch (Exception e){
+                Log.d(TAG,e.getMessage());
+            }
+
+        }
+
     }
 
     @Override

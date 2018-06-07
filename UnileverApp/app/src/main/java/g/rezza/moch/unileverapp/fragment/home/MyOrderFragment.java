@@ -1,5 +1,6 @@
 package g.rezza.moch.unileverapp.fragment.home;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -16,6 +17,7 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import g.rezza.moch.unileverapp.MainActivity;
+import g.rezza.moch.unileverapp.OrderDetailActivity;
 import g.rezza.moch.unileverapp.R;
 import g.rezza.moch.unileverapp.adapter.InvoiceAdapter;
 import g.rezza.moch.unileverapp.adapter.MyOrderAdapter;
@@ -49,7 +51,7 @@ public class MyOrderFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view       = inflater.inflate(R.layout.fragment_invoice, container, false);
+        View view       = inflater.inflate(R.layout.fragment_order_history, container, false);
         lsvw_invoice_00 = view.findViewById(R.id.lsvw_invoice_00);
         txvw_empty_00   = view.findViewById(R.id.txvw_empty_00);
         adapter         = new MyOrderAdapter(getActivity(), list);
@@ -79,7 +81,7 @@ public class MyOrderFragment extends Fragment {
 
     private void initData() {
         PostManager post = new PostManager(getActivity());
-        post.setApiUrl("order/history/outletId/"+outletDB.outlet_id);
+        post.setApiUrl("Order/list/outletId/"+outletDB.outlet_id);
         post.execute("GET");
         post.setOnReceiveListener(new PostManager.onReceiveListener() {
             @Override
@@ -95,8 +97,12 @@ public class MyOrderFragment extends Fragment {
                             JSONObject history = data.getJSONObject(i);
                             ListOrderHolder holder = new ListOrderHolder();
                             holder.order_id     = history.getString("order_id");
-                            holder.order_date   =history.getString("updated_date");
+                            holder.order_date   = history.getString("order_date");
                             holder.order_payment_type   =history.getString("order_payment_type");
+                            holder.note       = history.getString("order_note");
+                            holder.discount   = history.getString("order_discount");
+                            holder.total   = history.getString("total");
+                            holder.status   = history.getString("order_status");
                             list.add(holder);
                         }
                     } catch (JSONException e) {
@@ -108,6 +114,20 @@ public class MyOrderFragment extends Fragment {
                     txvw_empty_00.setVisibility(View.VISIBLE);
                 }
                 adapter.notifyDataSetChanged();
+            }
+        });
+
+
+        adapter.setOnSelectedListener(new MyOrderAdapter.OnSelectedListener() {
+            @Override
+            public void OnSelect(ListOrderHolder event, int position) {
+                Intent intent = new Intent(getActivity(), OrderDetailActivity.class);
+                intent.putExtra("ORDER_ID",event.order_id);
+                intent.putExtra("ORDER_DATE",event.order_date);
+                intent.putExtra("PAYMENT",event.order_payment_type);
+                intent.putExtra("DISCOUNT",event.discount);
+                intent.putExtra("NOTE",event.note);
+                startActivity(intent);
             }
         });
 

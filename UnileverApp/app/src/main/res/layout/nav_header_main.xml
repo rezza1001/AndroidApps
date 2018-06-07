@@ -43,6 +43,7 @@
                 android:textSize="@dimen/size_14sp" />
 
             <TextView
+                android:visibility="gone"
                 android:id="@+id/txvw_description_00"
                 android:layout_below="@+id/txvw_store_00"
                 android:layout_width="match_parent"

@@ -185,9 +185,47 @@ public class ProductDB {
     }
 
     public ArrayList<ProductDB> getProdcutsByBrand(Context context, String brand){
+
         Database pDB = new Database(context);
         SQLiteDatabase db = pDB.getReadableDatabase();
         Cursor res = db.rawQuery("select *  from " + TABLE_NAME + " WHERE "+ FIELD_BRAND_ID +"='"+brand+"'", null);
+        ArrayList<ProductDB> list = new ArrayList<>();
+        try {
+            while (res.moveToNext()){
+                ProductDB prod = new ProductDB();
+                prod.id              = res.getString(res.getColumnIndex(FIELD_ID));
+                prod.category_l1     = res.getString(res.getColumnIndex(FIELD_CATEGORY_L1));
+                prod.category_l2     = res.getString(res.getColumnIndex(FIELD_CATEGORY_L2));
+                prod.category_l3     = res.getString(res.getColumnIndex(FIELD_CATEGORY_L3));
+                prod.brand           = res.getString(res.getColumnIndex(FIELD_BRAND));
+                prod.brand_id      = res.getString(res.getColumnIndex(FIELD_BRAND_ID));
+                prod.sku             = res.getString(res.getColumnIndex(FIELD_SKU));
+                prod.name            = res.getString(res.getColumnIndex(FIELD_NAME));
+                prod.pricelist       = Long.parseLong(res.getString(res.getColumnIndex(FIELD_PRICELIST)));
+                prod.selling_price   = Long.parseLong(res.getString(res.getColumnIndex(FIELD_SELLING_PRICE)));
+                prod.discount        =res.getDouble(res.getColumnIndex(FIELD_DISCOUNT));
+                prod.photo_link      = res.getString(res.getColumnIndex(FIELD_PATH));
+                prod.photo           = res.getString(res.getColumnIndex(FIELD_PHOTO));
+                list.add(prod);
+            }
+            pDB.close();
+        }catch (Exception e){
+            Log.d(TAG,e.getMessage());
+        }
+        finally {
+            res.close();
+            pDB.close();
+        }
+        return list;
+
+    }
+
+    public ArrayList<ProductDB> getProdcutsByBrandSortPrice(Context context, String brand,String sort){
+
+        Database pDB = new Database(context);
+        SQLiteDatabase db = pDB.getReadableDatabase();
+        Cursor res = db.rawQuery("select *  from " + TABLE_NAME + " WHERE "+ FIELD_BRAND_ID +"='"+brand+"'"
+                +" ORDER BY cast("+FIELD_SELLING_PRICE+" as unsigned) "+ sort, null);
         ArrayList<ProductDB> list = new ArrayList<>();
         try {
             while (res.moveToNext()){

@@ -21,7 +21,7 @@
 
 
         <TextView
-            android:id="@+id/txvw_counter_00"
+            android:id="@+id/txvw_title_00"
             android:layout_marginLeft="@dimen/size_1dp"
             android:textSize="@dimen/size_18sp"
             android:fontFamily="sans-serif"
@@ -75,6 +75,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
+            <g.rezza.moch.unileverapp.component.TextKeyValue
+                android:id="@+id/txkv_term_00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <g.rezza.moch.unileverapp.component.TextKeyValue
+                android:id="@+id/txkv_limit_00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <g.rezza.moch.unileverapp.component.TextKeyValue
+                android:id="@+id/txkv_note_00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <g.rezza.moch.unileverapp.component.TextKeyValue
+                android:id="@+id/txkv_payment_00"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -87,28 +106,6 @@
             <g.rezza.moch.unileverapp.component.ListOrder
                 android:layout_marginTop="@dimen/size_10sp"
                 android:id="@+id/lsvw_order_00"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <g.rezza.moch.unileverapp.component.TextKeyValue
-                android:layout_marginTop="@dimen/size_30dp"
-                android:id="@+id/txkv_date_order_01"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <g.rezza.moch.unileverapp.component.TextKeyValue
-                android:id="@+id/txkv_term_00"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <g.rezza.moch.unileverapp.component.TextKeyValue
-                android:id="@+id/txkv_limit_00"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <g.rezza.moch.unileverapp.component.TextKeyValue
-                android:id="@+id/txkv_payment_00"
-                android:visibility="gone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"/>
-            <g.rezza.moch.unileverapp.component.TextKeyValue
-                android:id="@+id/txkv_note_00"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 

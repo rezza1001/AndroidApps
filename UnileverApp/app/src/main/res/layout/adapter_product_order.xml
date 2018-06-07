@@ -55,6 +55,7 @@
         <LinearLayout
             android:id="@+id/lnly_bottom_00"
             android:layout_marginTop="@dimen/size_10dp"
+            android:weightSum="10"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/size_5dp"
@@ -62,20 +63,20 @@
 
             <RelativeLayout
                 android:gravity="center"
-                android:layout_width="@dimen/size_120dp"
+                android:layout_weight="5"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content">
 
                 <g.rezza.moch.unileverapp.component.SimpleSpinner
                     android:id="@+id/spnr_qty_00"
-                    android:layout_width="@dimen/size_90dp"
+                    android:layout_width="@dimen/size_200dp"
                     android:layout_height="wrap_content"/>
 
             </RelativeLayout>
             
-
-            
             <TextView
                 android:layout_width="wrap_content"
+                android:visibility="gone"
                 android:background="@drawable/background_wishlist"
                 android:layout_marginTop="@dimen/size_1dp"
                 android:layout_marginBottom="@dimen/size_1dp"
@@ -86,16 +87,41 @@
                 android:text="@string/move_to_wish"
                 android:layout_height="match_parent" />
 
-            <ImageView
-                android:id="@+id/imvw_remove_00"
+            <RelativeLayout
+                android:id="@+id/rvly_delete_00"
+                android:layout_weight="5"
+                android:layout_width="0dp"
+                android:gravity="center"
+                android:background="@drawable/background_round_white"
                 android:layout_marginTop="@dimen/size_1dp"
                 android:layout_marginBottom="@dimen/size_1dp"
-                android:layout_width="wrap_content"
-                android:background="@drawable/background_trash"
-                android:padding="@dimen/size_7dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                app:srcCompat="@drawable/ic_trash" />
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/imvw_remove_00"
+                    android:layout_marginTop="@dimen/size_1dp"
+                    android:layout_marginBottom="@dimen/size_1dp"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_weight="5"
+                    android:layout_width="wrap_content"
+                    android:padding="@dimen/size_7dp"
+                    android:layout_height="@dimen/size_40dp"
+                    app:srcCompat="@drawable/ic_trash" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="@dimen/size_14sp"
+                    android:fontFamily="sans-serif"
+                    android:textColor="@color/text_black"
+                    android:layout_toEndOf="@+id/imvw_remove_00"
+                    android:text="@string/delete" />
+            </RelativeLayout>
+
+
 
         </LinearLayout>
     </LinearLayout>

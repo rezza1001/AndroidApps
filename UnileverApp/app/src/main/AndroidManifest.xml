@@ -49,8 +49,22 @@
         <activity
             android:name=".SummaryOrderActivity"
             android:screenOrientation="portrait" />
-        <activity android:name=".ProductActivity" />
-        <activity android:name=".DetailProductActivity"></activity>
+        <activity
+            android:name=".ProductActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".DetailProductActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PaymentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".OrderDetailActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".InvoiceDetailActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".ForgotPwdActivity"  android:screenOrientation="portrait" />
+        <activity android:name=".FinishPaymentActivity"  android:screenOrientation="portrait"/>
+        <activity android:name=".WebViewActivity"  android:screenOrientation="portrait"/>
     </application>
 
 </manifest>
