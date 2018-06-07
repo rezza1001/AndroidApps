@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:background="@color/colorAccent"
+        android:padding="@dimen/size_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/edtx_name_00"
+            android:padding="@dimen/size_10dp"
+            style="@style/TextView.Black.Montserrat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50dp"
+            android:hint="@string/full_name"
+            android:imeActionLabel="Text"
+            android:inputType="text"
+            android:textSize="@dimen/size_16sp"
+            android:background="@drawable/editext_custom_02"
+            android:layout_marginBottom="@dimen/size_10dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/edtx_email_00"
+            android:padding="@dimen/size_10dp"
+            style="@style/TextView.Black.Montserrat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50dp"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:textSize="@dimen/size_16sp"
+            android:background="@drawable/editext_custom_02"
+            android:layout_marginBottom="@dimen/size_10dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/edtx_phone_00"
+            android:padding="@dimen/size_10dp"
+            style="@style/TextView.Black.Montserrat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50dp"
+            android:hint="@string/handphone"
+            android:inputType="phone"
+            android:textSize="@dimen/size_16sp"
+            android:background="@drawable/editext_custom_02"
+            android:layout_marginBottom="@dimen/size_10dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/edtx_subject_00"
+            android:padding="@dimen/size_10dp"
+            style="@style/TextView.Black.Montserrat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50dp"
+            android:hint="@string/subject_chooser"
+            android:inputType="text"
+            android:textSize="@dimen/size_16sp"
+            android:background="@drawable/editext_custom_02"
+            android:singleLine="true" />
+
+        <LinearLayout
+            android:id="@+id/lnly_subject_00"
+            android:background="@drawable/background_faq_category"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/size_10dp"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/lnly_subject_01"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txvw_subject_01"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/subject_01"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_25dp" />
+
+                <ImageView
+                    android:id="@+id/imvw_subject_01"
+                    android:layout_marginLeft="@dimen/size_10dp"
+                    android:layout_width="@dimen/size_30dp"
+                    android:layout_height="@dimen/size_25dp"
+                    app:srcCompat="@drawable/ic_selected" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnly_subject_02"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txvw_subject_02"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/subject_02"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_25dp" />
+
+                <ImageView
+                    android:id="@+id/imvw_subject_02"
+                    android:layout_marginLeft="@dimen/size_10dp"
+                    android:layout_width="@dimen/size_30dp"
+                    android:layout_height="@dimen/size_25dp"
+                    app:srcCompat="@drawable/ic_selected" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/lnly_subject_03"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:id="@+id/txvw_subject_03"
+                    android:fontFamily="@font/montserrat"
+                    android:text="@string/subject_03"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_25dp" />
+
+                <ImageView
+                    android:id="@+id/imvw_subject_03"
+                    android:layout_marginLeft="@dimen/size_10dp"
+                    android:layout_width="@dimen/size_30dp"
+                    android:layout_height="@dimen/size_25dp"
+                    app:srcCompat="@drawable/ic_selected" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <EditText
+            android:id="@+id/edtx_note_00"
+            android:padding="@dimen/size_10dp"
+            style="@style/TextView.Black.Montserrat"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_100dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:hint="@string/write_message"
+            android:inputType="textMultiLine"
+            android:gravity="top"
+            android:textSize="@dimen/size_16sp"
+            android:background="@drawable/editext_custom_02"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bbtn_action_00"
+        android:layout_margin="@dimen/size_10dp"
+        android:text="@string/send_message"
+        android:textAllCaps="false"
+        android:textSize="@dimen/size_20sp"
+        android:layout_alignParentBottom="true"
+        style="@style/TextView.White.Montserrat.Bold"
+        android:background="@drawable/button_orange"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45dp" />
+
+</RelativeLayout>

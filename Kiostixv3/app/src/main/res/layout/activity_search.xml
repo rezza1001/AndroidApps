@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#80818b9b"
+
+    xmlns:design="http://schemas.android.com/apk/res-auto"
+    tools:context="g.rezza.moch.kiostixv3.activity.SearchActivity">
+
+    <RelativeLayout
+        android:background="@color/colorAccent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/rvly_search_00"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_40dp"
+            android:layout_alignTop="@+id/imvw_logo_00"
+            android:layout_toEndOf="@+id/imvw_logo_00"
+            android:layout_toRightOf="@+id/imvw_logo_00"
+            android:background="@color/white">
+
+            <EditText
+                android:id="@+id/edtx_search_00"
+                style="@style/TextView.Black.Montserrat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginLeft="@dimen/size_40dp"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="@string/search_by_name"
+                android:focusable="true"
+                android:inputType="textPersonName"
+                android:textSize="@dimen/size_16sp" />
+
+            <ImageView
+                android:id="@+id/imvw_back_00"
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                design:srcCompat="@drawable/ic_back_black" />
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/lsvw_see_all_00"
+            android:layout_below="@+id/rvly_search_00"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

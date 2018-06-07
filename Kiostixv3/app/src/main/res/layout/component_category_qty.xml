@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_marginBottom="@dimen/size_10dp"
+        android:weightSum="3"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_weight="2"
+            android:layout_width="0dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txvw_category_30"
+                style="@style/TextView.Black.Montserrat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Premium Test"
+                android:textSize="@dimen/size_14sp" />
+
+            <TextView
+                android:id="@+id/txvw_price_31"
+                android:layout_below="@+id/txvw_category_30"
+                style="@style/TextView.Black.Montserrat.Bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="IDR 400,000"
+                android:textSize="@dimen/size_14sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_40dp"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+
+                <TextView
+                    android:id="@+id/bbtn_minus_40"
+                    style="@style/TextView.Black.Montserrat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_white_line"
+                    android:gravity="center"
+                    android:text="-"
+                    android:textSize="@dimen/size_22sp" />
+
+                <TextView
+                    android:id="@+id/txvw_qty_32"
+                    style="@style/TextView.Black.Montserrat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txvw_category_30"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_white_00"
+                    android:gravity="center"
+                    android:text="0"
+                    android:textSize="@dimen/size_18sp" />
+
+                <TextView
+                    android:id="@+id/bbtn_plus_41"
+                    style="@style/TextView.Black.Montserrat"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_white_line"
+                    android:gravity="center"
+                    android:text="+"
+                    android:textSize="@dimen/size_22sp" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

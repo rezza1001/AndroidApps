@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+   <ScrollView
+       android:background="@color/grey"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+
+      <LinearLayout
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+
+         <RelativeLayout
+             android:visibility="visible"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent">
+
+
+            <RelativeLayout
+                android:visibility="visible"
+                android:id="@+id/rvly_active_00"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+               <RelativeLayout
+                   android:id="@+id/rvly_header_00"
+                   android:background="@drawable/my_account_background"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/size_160dp">
+
+                  <de.hdodenhof.circleimageview.CircleImageView
+                      android:id="@+id/imvw_account_00"
+                      android:layout_width="@dimen/size_85dp"
+                      android:layout_height="@dimen/size_85dp"
+                      android:layout_centerInParent="true"
+                      android:src="@mipmap/ic_account"
+                      app:civ_border_color="@color/grey"
+                      app:civ_border_width="0dp"
+                      app:civ_fill_color="@color/grey" />
+
+                  <RelativeLayout
+                      android:id="@+id/rvly_changeimage_00"
+                      android:layout_alignParentRight="true"
+                      android:padding="@dimen/size_10dp"
+                      android:layout_width="wrap_content"
+                      android:gravity="center"
+                      android:layout_height="wrap_content">
+                     <ImageView
+                         android:id="@+id/imageView4"
+                         android:layout_centerHorizontal="true"
+                         android:layout_width="@dimen/size_30dp"
+                         android:layout_height="@dimen/size_30dp"
+                         app:srcCompat="@drawable/ic_image_collection" />
+
+                     <TextView
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"
+                         android:textSize="@dimen/size_12sp"
+                         style="@style/TextView.White.Montserrat"
+                         android:layout_below="@+id/imageView4"
+                         android:layout_marginTop="@dimen/size_5dp"
+                         android:layout_centerHorizontal="true"
+                         android:text="@string/change_photo" />
+
+                  </RelativeLayout>
+
+
+
+                  <TextView
+                      android:id="@+id/txvw_name_00"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="@dimen/size_16sp"
+                      style="@style/TextView.White.Montserrat.Bold"
+                      android:layout_below="@+id/imvw_account_00"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginTop="@dimen/size_10dp"
+                      android:text="My Account" />
+
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:id="@+id/rvly_body_00"
+                   android:layout_margin="@dimen/size_10dp"
+                   android:background="@color/white"
+                   android:layout_marginTop="@dimen/size_20dp"
+                   android:layout_below="@+id/rvly_header_00"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content">
+
+                  <LinearLayout
+                      android:padding="@dimen/size_10dp"
+                      android:orientation="vertical"
+                      android:gravity="right"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+
+                     <TextView
+                         android:id="@+id/txvw_change_00"
+                         android:background="@drawable/button_standard"
+                         android:text="Ubah"
+                         style="@style/TextView.Black.Montserrat"
+                         android:textColor="@color/colorPrimary"
+                         android:textSize="@dimen/size_16sp"
+                         android:padding="@dimen/size_10dp"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content" />
+
+                     <RelativeLayout
+                         android:background="@color/grey"
+                         android:layout_width="match_parent"
+                         android:layout_height="1dp"/>
+
+                     <g.rezza.moch.kiostixv3.component.TextViewProfile
+                         android:id="@+id/txpf_email_00"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                     <g.rezza.moch.kiostixv3.component.TextViewProfile
+                         android:id="@+id/txpf_phone_00"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+
+                     <g.rezza.moch.kiostixv3.component.TextViewProfile
+                         android:id="@+id/txpf_gender_00"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                     <g.rezza.moch.kiostixv3.component.TextViewProfile
+                         android:id="@+id/txpf_pob_00"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                     <g.rezza.moch.kiostixv3.component.TextViewProfile
+                         android:id="@+id/txpf_dob_00"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+
+                     <g.rezza.moch.kiostixv3.component.TextViewProfile
+                         android:id="@+id/txpf_idtype_00"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                     <g.rezza.moch.kiostixv3.component.TextViewProfile
+                         android:id="@+id/txpf_idnumber_00"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                     <g.rezza.moch.kiostixv3.component.TextViewProfile
+                         android:id="@+id/txpf_country_00"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                     <g.rezza.moch.kiostixv3.component.TextViewProfile
+                         android:id="@+id/txpf_province_00"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                     <g.rezza.moch.kiostixv3.component.TextViewProfile
+                         android:id="@+id/txpf_city_00"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                     <g.rezza.moch.kiostixv3.component.TextViewProfile
+                         android:id="@+id/txpf_address_00"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                     <g.rezza.moch.kiostixv3.component.TextViewProfile
+                         android:id="@+id/txpf_pos_00"
+                         android:layout_width="wrap_content"
+                         android:layout_height="wrap_content"/>
+                  </LinearLayout>
+
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:id="@+id/rvly_changepwd_00"
+                   android:background="@drawable/button_standard"
+                   android:layout_marginLeft="@dimen/size_10dp"
+                   android:layout_marginRight="@dimen/size_10dp"
+                   android:layout_below="@+id/rvly_body_00"
+                   android:gravity="center_vertical"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/size_45dp">
+
+                  <TextView
+                      android:text="Ubah Kata Sandi"
+                      style="@style/TextView.Black.Montserrat"
+                      android:textColor="@color/colorPrimary"
+                      android:textSize="@dimen/size_16sp"
+                      android:padding="@dimen/size_10dp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" />
+
+                  <ImageView
+                      android:id="@+id/imageView3"
+                      android:layout_width="@dimen/size_30dp"
+                      android:layout_height="@dimen/size_30dp"
+                      android:layout_alignParentEnd="true"
+                      android:layout_centerVertical="true"
+                      android:layout_marginEnd="8dp"
+                      app:srcCompat="@mipmap/ic_lock_blue" />
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:id="@+id/rvly_logout_00"
+                   android:background="@drawable/button_standard"
+                   android:layout_margin="@dimen/size_10dp"
+                   android:layout_below="@+id/rvly_changepwd_00"
+                   android:gravity="center_vertical"
+                   android:layout_width="match_parent"
+                   android:layout_height="@dimen/size_45dp">
+
+                  <TextView
+                      android:text="Keluar"
+                      style="@style/TextView.Black.Montserrat"
+                      android:textColor="@color/colorPrimary"
+                      android:textSize="@dimen/size_16sp"
+                      android:padding="@dimen/size_10dp"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content" />
+
+                  <ImageView
+
+                      android:layout_width="@dimen/size_30dp"
+                      android:layout_height="@dimen/size_30dp"
+                      android:layout_alignParentEnd="true"
+                      android:layout_centerVertical="true"
+                      android:layout_marginEnd="8dp"
+                      app:srcCompat="@mipmap/ic_out_blue" />
+               </RelativeLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:visibility="gone"
+                android:id="@+id/rvly_nonactive_00"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+               <RelativeLayout
+
+                   android:background="@drawable/onboarding_3"
+                   android:padding="@dimen/size_10dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="match_parent">
+
+                  <ImageView
+                      android:id="@+id/imvw_account_01"
+                      android:layout_width="wrap_content"
+                      android:layout_height="@dimen/size_45dp"
+                      android:layout_marginTop="@dimen/size_30dp"
+                      android:layout_alignParentTop="true"
+                      android:layout_centerHorizontal="true"
+                      android:src="@drawable/ic_kiostix" />
+
+                  <TextView
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:textSize="@dimen/size_20sp"
+                      style="@style/TextView.White.Montserrat.Bold"
+                      android:layout_below="@+id/imvw_account_01"
+                      android:layout_centerHorizontal="true"
+                      android:layout_marginTop="@dimen/size_10dp"
+                      android:text="My Account" />
+
+               </RelativeLayout>
+
+               <RelativeLayout
+                   android:id="@+id/rvly_banner_00"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:paddingRight="@dimen/size_35dp"
+                   android:paddingLeft="@dimen/size_35dp"
+                   android:layout_centerHorizontal="true"
+                   android:layout_centerVertical="true">
+
+                  <TextView
+                      android:id="@+id/txvw_banner_01"
+                      style="@style/TextView.White.Montserrat.Bold"
+                      android:layout_centerHorizontal="true"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:gravity="center"
+                      android:textSize="@dimen/size_22sp"
+                      android:text="@string/started_now" />
+                  <TextView
+                      android:id="@+id/txvw_banner_02"
+                      android:layout_below="@+id/txvw_banner_01"
+                      style="@style/TextView.White.Montserrat"
+                      android:layout_centerHorizontal="true"
+                      android:layout_width="wrap_content"
+                      android:gravity="center"
+                      android:layout_height="wrap_content"
+                      android:textSize="@dimen/size_16sp"
+                      android:text="@string/started_now_desc" />
+               </RelativeLayout>
+
+               <LinearLayout
+                   android:id="@+id/lnly_action_00"
+                   android:layout_alignParentBottom="true"
+                   android:layout_marginBottom="@dimen/size_20dp"
+                   android:padding="@dimen/size_10dp"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:orientation="horizontal">
+
+                  <Button
+                      android:id="@+id/bbtn_register_00"
+                      android:background="@drawable/button_transparent"
+                      android:layout_weight="1"
+                      android:textSize="@dimen/size_14sp"
+                      android:layout_width="0dp"
+                      android:textStyle="bold"
+                      android:textAllCaps="false"
+                      style="@style/TextView.White.Montserrat"
+                      android:layout_marginRight="@dimen/size_5dp"
+                      android:layout_height="@dimen/size_40dp"
+                      android:text="@string/register" />
+
+                  <Button
+                      android:id="@+id/bbtn_login_00"
+                      android:layout_weight="1"
+                      style="@style/TextView.White.Montserrat"
+                      android:textSize="@dimen/size_14sp"
+                      android:textStyle="bold"
+                      android:layout_marginLeft="@dimen/size_5dp"
+                      android:background="@drawable/button_transparent"
+                      android:layout_width="0dp"
+                      android:textAllCaps="false"
+                      android:layout_height="@dimen/size_40dp"
+                      android:text="@string/login" />
+
+               </LinearLayout>
+
+            </RelativeLayout>
+
+
+         </RelativeLayout>
+
+      </LinearLayout>
+   </ScrollView>
+
+</RelativeLayout>

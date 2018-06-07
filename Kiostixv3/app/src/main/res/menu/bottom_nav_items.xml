@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    app:bbn_alwaysShowLabels="true"
+    app:bbn_itemColorActive="@color/colorPrimaryDark"
+    app:bbn_itemColorDisabled="#33ffffff"
+    app:bbn_itemColorInactive="#ff9900"
+    app:bbn_badgeColor="#FFFF0000"
+    app:bbn_rippleColor="@color/colorPrimaryDark">
+
+    <item
+        android:id="@+id/menu_beranda"
+        android:title="@string/beranda"
+        android:icon="@mipmap/ic_home_black"
+        />
+
+    <item
+        android:id="@+id/menu_tix"
+        android:title="@string/tix"
+        android:icon="@mipmap/ic_tix"
+        />
+
+    <item
+        android:id="@+id/menu_help"
+        android:title="@string/help"
+        android:icon="@mipmap/ic_help"/>
+
+    <item
+        android:id="@+id/menu_account"
+        android:title="@string/account"
+        android:icon="@mipmap/ic_account"/>
+
+</menu>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txvw_term_00"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_25dp"
+        android:lineSpacingExtra="@dimen/size_4dp"
+        android:fontFamily="@font/montserrat_light"
+        android:text="Koneksi adalah singkatan dari Komedi Musik Ekspresi yang merupakan gabungan antara Standup Comedy dengan musik. Acara ini merupakan final dari kompetisi Standup Comedy Pekanbaru dan akan diselenggarakan pada tanggal 17 Maret 2018 di Grand Ballroom Alpha Hotel Pekanbaru, pada pukul 09.00 sampai dengan 23.30 WIB Acara koneksi ini akan menghadirkan penampilan special dari Praz Teguh dan Romi Alfredo, Oncy Ungu feat Maya Meuya. Harga tiket acara Koneksi ini mulai dari Rp 50.000 untuk kelas Festival, Rp 75.000 untuk VIP dan Rp 100.000 untuk VVIP dan pembeliannya bisa dilakukan mulai tanggal 19 Februari 2018 hingga 14 Maret 2018 di website kiostix. Untuk penukaran bisa dilakukan pada tanggal 16 dan 17 Maret pada pukul 10.00 sampai 17.00 di Hotel Alpha Pekanbaru, Riau."
+        style="@style/TextView.Black.Montserrat"
+        android:textSize="@dimen/size_16sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>

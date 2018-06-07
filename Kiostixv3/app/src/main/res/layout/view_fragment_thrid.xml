@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/onboarding_3"
+    tools:context="g.rezza.moch.kiostixv3.activity.Onboardctivity">
+
+
+    <Button
+        android:id="@+id/bbtn_skip_00"
+        android:background="@drawable/button_transparent"
+        android:layout_marginRight="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_width="wrap_content"
+        style="@style/TextView.White.Montserrat"
+        android:textSize="@dimen/size_14sp"
+        android:layout_height="@dimen/size_35dp"
+        android:layout_alignParentTop="true"
+        android:textAllCaps="false"
+        android:layout_alignParentRight="true"
+        android:text="@string/skip" />
+
+
+    <LinearLayout
+        android:id="@+id/lnly_action_00"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/size_20dp"
+        android:padding="@dimen/size_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bbtn_register_00"
+            android:background="@drawable/button_transparent"
+            android:layout_weight="1"
+            android:textSize="@dimen/size_14sp"
+            android:layout_width="0dp"
+            android:textStyle="bold"
+            android:textAllCaps="false"
+            style="@style/TextView.White.Montserrat"
+            android:layout_marginRight="@dimen/size_5dp"
+            android:layout_height="@dimen/size_40dp"
+            android:text="@string/register" />
+
+        <Button
+            android:id="@+id/bbtn_login_00"
+            android:layout_weight="1"
+            style="@style/TextView.White.Montserrat"
+            android:textSize="@dimen/size_14sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="@dimen/size_5dp"
+            android:background="@drawable/button_transparent"
+            android:layout_width="0dp"
+            android:textAllCaps="false"
+            android:layout_height="@dimen/size_40dp"
+            android:text="@string/login" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rvly_banner_00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="@dimen/size_35dp"
+        android:paddingLeft="@dimen/size_35dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:id="@+id/txvw_banner_01"
+            style="@style/TextView.White.Montserrat.Bold"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="@dimen/size_22sp"
+            android:text="@string/started_now" />
+        <TextView
+            android:id="@+id/txvw_banner_02"
+            android:layout_below="@+id/txvw_banner_01"
+            style="@style/TextView.White.Montserrat"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_16sp"
+            android:text="@string/started_now_desc" />
+    </RelativeLayout>
+    <ImageView
+        android:id="@+id/imvw_left_00"
+        android:src="@mipmap/ic_left"
+        android:layout_marginLeft="@dimen/size_5dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_width="@dimen/size_30dp"
+        android:layout_height="@dimen/size_30dp" />
+
+    <ImageView
+        android:id="@+id/imvw_right_00"
+        android:src="@mipmap/ic_right"
+        android:visibility="gone"
+        android:layout_marginRight="@dimen/size_5dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/size_30dp"
+        android:layout_height="@dimen/size_30dp" />
+
+    <ImageView
+        android:id="@+id/imvw_logo_00"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_60dp"
+        android:layout_width="@dimen/size_120dp"
+        android:scaleType="fitXY"
+        android:layout_height="@dimen/size_45dp"
+        app:srcCompat="@drawable/ic_kiostix" />
+</RelativeLayout>

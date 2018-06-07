@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorAccent"
+    tools:context="g.rezza.moch.kiostixv3.activity.SeeAllActivity">
+
+
+
+    <RelativeLayout
+        android:id="@+id/header_00"
+        android:background="@color/colorPrimary"
+        android:layout_width="match_parent"
+        android:paddingLeft="@dimen/size_5dp"
+        android:paddingRight="@dimen/size_5dp"
+        android:padding="@dimen/size_10dp"
+        android:paddingBottom="@dimen/size_10dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+        <ImageView
+            android:src="@mipmap/ic_back_white"
+            android:scaleType="fitCenter"
+            android:layout_width="@dimen/size_30dp"
+            android:layout_height="@dimen/size_40dp"
+            android:id="@+id/imvw_back_00" />
+
+        <g.rezza.moch.kiostixv3.component.SearchViw
+            android:id="@+id/serchvw_00"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/txvw_title_00"
+            style="@style/TextView.White.Montserrat.Bold"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/size_40dp"
+            android:layout_marginLeft="@dimen/size_10dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:layout_toEndOf="@+id/imvw_back_00"
+            android:layout_toRightOf="@+id/imvw_back_00"
+            android:text="Title Here"
+            android:textSize="@dimen/size_16sp" />
+
+        <ImageView
+            android:src="@mipmap/ic_search_white"
+            android:scaleType="fitCenter"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/size_30dp"
+            android:layout_height="@dimen/size_40dp"
+            android:id="@+id/imvw_serach_00"
+            android:layout_alignParentRight="true" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:orientation="horizontal"
+        android:id="@+id/rvly_menu_00"
+        android:layout_below="@+id/header_00"
+        android:gravity="bottom"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50dp">
+
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_weight="5"
+            android:gravity="center"
+            android:layout_marginRight="1dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <ImageView
+                android:src="@mipmap/ic_sort_bluedark"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="@dimen/size_5dp"
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imvw_sort_00"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/TextView.Black.Montserrat"
+                android:gravity="center"
+                android:textSize="@dimen/size_16sp"
+                android:textColor="@color/colorPrimary"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imvw_sort_00"
+                android:text="Sort" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:background="@color/white"
+            android:layout_weight="5"
+            android:layout_marginLeft="1dp"
+            android:layout_width="0dp"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:src="@mipmap/ic_filter_bluedark"
+                android:scaleType="fitCenter"
+                android:layout_marginRight="@dimen/size_5dp"
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="match_parent"
+                android:id="@+id/imvw_filter_00"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                style="@style/TextView.Black.Montserrat"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/size_16sp"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@+id/imvw_filter_00"
+                android:text="Filter" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/lsvw_see_all_00"
+        android:background="@color/grey"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null"
+        android:layout_marginTop="@dimen/size_5dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/rvly_menu_00" />
+
+</RelativeLayout>

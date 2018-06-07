@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/colorAccent"
+    android:paddingBottom="@dimen/size_10dp"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/imvw_event_00"
+        android:layout_width="@dimen/size_170dp"
+        android:layout_height="@dimen/size_125dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/events_07" />
+
+    <RelativeLayout
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_125dp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/imvw_event_00"
+        android:layout_toRightOf="@+id/imvw_event_00">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/size_10dp"
+            android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txvw_title_00"
+            style="@style/TextView.Black.Montserrat"
+            android:textSize="@dimen/size_14sp"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title Here" />
+
+        <TextView
+            android:id="@+id/txvw_venue_00"
+            style="@style/TextView.Black.Montserrat"
+            android:fontFamily="@font/montserrat_light"
+            android:textSize="@dimen/size_12sp"
+            android:maxLines="2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Venue Here" />
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
