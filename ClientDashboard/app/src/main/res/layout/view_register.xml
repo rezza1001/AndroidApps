@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/colorBlue_02"
+    android:padding="@dimen/size_20dp"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imvw_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_20dp"
+        app:srcCompat="@drawable/logo_kiostix" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/imvw_logo"
+        android:orientation="vertical">
+
+        <g.rezza.moch.clientdashboard.component.EditextWithTitle
+            android:id="@+id/edwt_username_01"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <g.rezza.moch.clientdashboard.component.EditextWithTitle
+            android:id="@+id/edwt_password_02"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/bbtn_register_01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50dp"
+            android:layout_marginTop="@dimen/size_30dp"
+            android:textSize="@dimen/size_14sp"
+            android:background="@color/colorBlue_01"
+            android:textColor="@color/colorWhite_02"
+            android:text="Register" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txvw_marker_00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_10sp"
+        android:ellipsize="end"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/size_7dp"
+        android:layout_marginLeft="@dimen/size_5dp"
+        android:layout_marginRight="@dimen/size_5dp"
+        android:textColor="@color/colorPrimaryDark"
+
+        />
+
+</RelativeLayout>

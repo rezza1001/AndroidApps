@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/rvly_header_00"
+            android:background="@drawable/baxkground_blue_lr_01"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_250dp">
+
+            <ImageView
+                android:id="@+id/imvw_logo"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/size_20dp"
+                app:srcCompat="@drawable/logo_kiostix" />
+
+            <TextView
+                android:layout_below="@+id/imvw_logo"
+                android:id="@+id/textView"
+                android:gravity="center"
+                android:textColor="@color/colorWhite_01"
+                android:textSize="@dimen/size_18sp"
+                android:textStyle="bold"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Sign In" />
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/size_200dp"
+            android:background="@drawable/baxkground_white_rd_00"
+            android:layout_marginLeft="@dimen/size_20dp"
+            android:layout_marginRight="@dimen/size_20dp"
+            android:padding="@dimen/size_20dp"
+            android:layout_marginBottom="@dimen/size_20dp"
+            android:id="@+id/rvly_body_01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <g.rezza.moch.clientdashboard.component.EditextWithTitle
+                    android:id="@+id/edwt_username_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp" />
+
+                <g.rezza.moch.clientdashboard.component.EditextWithTitle
+                    android:id="@+id/edwt_password_02"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp" />
+
+                <TextView
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:gravity="right"
+                    android:id="@+id/txvw_notif_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/size_10sp"
+                    android:textColor="@color/colorred_01"
+                    android:text="Wrong Password or Username !" />
+
+                <Button
+                    android:id="@+id/bbtn_login_01"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_50dp"
+                    android:layout_marginTop="@dimen/size_30dp"
+                    android:background="@drawable/button_blue_lr_01"
+                    android:text="Login"
+                    android:textColor="@color/colorWhite_02"
+                    android:textSize="@dimen/size_14sp" />
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/txvw_create_01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="@dimen/size_50dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/create_account"
+                    android:textColor="@color/colorWhite_01"
+                    android:textSize="@dimen/size_14sp" />
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

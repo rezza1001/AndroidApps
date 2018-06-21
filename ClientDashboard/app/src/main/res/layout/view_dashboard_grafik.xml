@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+
+    <LinearLayout
+        android:paddingTop="@dimen/size_3dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="10"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:visibility="gone"
+            android:gravity="right"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_34dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:textColor="@color/colorWhite_02"
+                android:id="@+id/bbtn_total_01"
+                android:background="@drawable/button_blue_2"
+                android:layout_width="@dimen/size_70dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:textSize="@dimen/size_10sp"
+                android:text="Total" />
+
+            <Button
+                android:textColor="@color/colorWhite_02"
+                android:textSize="@dimen/size_10sp"
+                android:id="@+id/bbtn_30days_01"
+                android:background="@drawable/button_blue_1"
+                android:layout_width="@dimen/size_70dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:text="30 Days" />
+
+            <Button
+                android:textColor="@color/colorWhite_02"
+                android:textSize="@dimen/size_10sp"
+                android:id="@+id/bbtn_07days_01"
+                android:background="@drawable/button_blue_2"
+                android:layout_width="@dimen/size_70dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:text="7 Days" />
+
+            <Button
+                android:textColor="@color/colorWhite_02"
+                android:textSize="@dimen/size_10sp"
+                android:id="@+id/bbtn_24hour_01"
+                android:background="@drawable/button_blue_2"
+                android:layout_width="@dimen/size_70dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_marginRight="@dimen/size_10dp"
+                android:text="24 Hours" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:background="@color/colorPrimaryDark"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_2dp" />
+
+        <RelativeLayout
+            android:layout_weight="10"
+            android:id="@+id/rvly_grafik_01"
+            android:layout_width="match_parent"
+            android:layout_height="0dp">
+
+            <com.github.mikephil.charting.charts.LineChart
+                android:id="@+id/chart1"
+                android:layout_marginRight="@dimen/size_4dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </com.github.mikephil.charting.charts.LineChart>
+
+        </RelativeLayout>
+
+        <g.rezza.moch.clientdashboard.component.LegentView_01
+            android:id="@+id/lgnd_sold_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></g.rezza.moch.clientdashboard.component.LegentView_01>
+
+        <g.rezza.moch.clientdashboard.component.LegentView_01
+            android:id="@+id/lgnd_sales_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></g.rezza.moch.clientdashboard.component.LegentView_01>
+
+        <g.rezza.moch.clientdashboard.component.LegentView_01
+            android:id="@+id/lgnd_pageview_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></g.rezza.moch.clientdashboard.component.LegentView_01>
+
+        <g.rezza.moch.clientdashboard.component.LegentView_01
+            android:id="@+id/lgnd_rate_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></g.rezza.moch.clientdashboard.component.LegentView_01>
+
+    </LinearLayout>
+</RelativeLayout>

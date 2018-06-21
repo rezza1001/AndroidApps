@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:paddingTop="@dimen/size_2dp"
+        android:id="@+id/lnly_heder_01"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_34dp"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/bbtn_today_02"
+            android:layout_width="@dimen/size_60dp"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginRight="@dimen/size_1dp"
+            android:background="@drawable/button_blue_3"
+            android:text="Today"
+            android:textColor="@color/colorWhite_02"
+            android:textSize="@dimen/size_8sp" />
+        <Button
+            android:id="@+id/bbtn_yesterday_02"
+            android:layout_width="@dimen/size_60dp"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginRight="@dimen/size_1dp"
+            android:background="@drawable/button_blue_3"
+            android:text="Yesterday"
+            android:textColor="@color/colorWhite_02"
+            android:textSize="@dimen/size_8sp" />
+
+        <Button
+            android:textColor="@color/colorWhite_02"
+            android:textSize="@dimen/size_8sp"
+            android:id="@+id/bbtn_7days_01"
+            android:background="@drawable/button_blue_3"
+            android:layout_width="@dimen/size_65dp"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginRight="@dimen/size_1dp"
+            android:text="Last 7 Days" />
+
+        <Button
+            android:textColor="@color/colorWhite_02"
+            android:textSize="@dimen/size_8sp"
+            android:id="@+id/bbtn_month_02"
+            android:background="@drawable/button_blue_3"
+            android:layout_width="@dimen/size_65dp"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginRight="@dimen/size_1dp"
+            android:text="This Month" />
+
+        <Button
+            android:textColor="@color/colorWhite_02"
+            android:textSize="@dimen/size_8sp"
+            android:id="@+id/bbtn_last_month_02"
+            android:background="@drawable/button_blue_3"
+            android:layout_width="@dimen/size_65dp"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginRight="@dimen/size_5dp"
+            android:text="Last Month" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_below="@+id/lnly_heder_01"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_3dp"
+        android:background="@color/colorPrimaryDark" />
+
+    <LinearLayout
+        android:layout_below="@+id/lnly_heder_01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <g.rezza.moch.clientdashboard.component.LegentView_01
+                android:id="@+id/lgnd_sold_01"
+                android:layout_width="@dimen/size_250dp"
+                android:layout_height="wrap_content"></g.rezza.moch.clientdashboard.component.LegentView_01>
+
+            <g.rezza.moch.clientdashboard.component.LegentView_01
+                android:id="@+id/lgnd_sales_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></g.rezza.moch.clientdashboard.component.LegentView_01>
+
+            <g.rezza.moch.clientdashboard.component.LegentView_01
+                android:id="@+id/lgnd_pageview_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></g.rezza.moch.clientdashboard.component.LegentView_01>
+
+            <g.rezza.moch.clientdashboard.component.LegentView_01
+                android:id="@+id/lgnd_rate_01"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></g.rezza.moch.clientdashboard.component.LegentView_01>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/size_3dp"
+            android:weightSum="10">
+
+
+            <RelativeLayout
+                android:id="@+id/rvly_grafik_01"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="10">
+
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart1"
+                    android:layout_marginRight="@dimen/size_4dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </com.github.mikephil.charting.charts.LineChart>
+            </RelativeLayout>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

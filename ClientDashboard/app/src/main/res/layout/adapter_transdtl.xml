@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:padding="@dimen/size_5dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/txvw_orderno_00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_10sp"
+        android:textColor="@color/colorBlueBlack_01"
+        android:textStyle="bold"
+        android:text="Event Name" />
+
+    <LinearLayout
+        android:layout_below="@+id/txvw_orderno_00"
+        android:id="@+id/lnly_payment_method_00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/size_70dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_8sp"
+            android:textColor="@color/colorBlueBlack_01_t50"
+            android:text="Payment Method" />
+
+        <TextView
+            android:id="@+id/txvw_payment_method_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_8sp"
+            android:layout_marginLeft="@dimen/size_5dp"
+            android:textColor="@color/colorBlueBlack_01"
+            android:text="Bank Transfer(VA Midtrans)" />
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:layout_below="@+id/lnly_payment_method_00"
+        android:id="@+id/lnly_sales_channel_00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/size_70dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_8sp"
+            android:textColor="@color/colorBlueBlack_01_t50"
+            android:text="Sales/Channel" />
+
+        <TextView
+            android:id="@+id/txvw_sales_channel_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_8sp"
+            android:layout_marginLeft="@dimen/size_5dp"
+            android:textColor="@color/colorBlueBlack_01"
+            android:text="Internet/Website" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_below="@+id/lnly_sales_channel_00"
+        android:id="@+id/lnly_order_value_00"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/size_70dp"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_8sp"
+            android:textColor="@color/colorBlueBlack_01_t50"
+            android:text="Order Value" />
+
+        <TextView
+            android:id="@+id/txvw_order_value_02"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/size_8sp"
+            android:layout_marginLeft="@dimen/size_5dp"
+            android:textColor="@color/colorBlueBlack_01"
+            android:text="Rp. 5000,000" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txvw_created_date_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textSize="@dimen/size_8sp"
+        android:textColor="@color/colorBlueBlack_01"
+        android:text="20 Septmebr 2017" />
+
+    <TextView
+        android:layout_below="@+id/txvw_created_date_01"
+        android:id="@+id/txvw_qty_01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:textStyle="bold"
+        android:textSize="@dimen/size_11sp"
+        android:textColor="@color/colorBlueBlack_01"
+        android:text="100" />
+
+</RelativeLayout>

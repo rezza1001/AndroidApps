@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txvw_title_order_04"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/size_12sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorBlueBlack_02"
+        android:text="PAYMENT METHOD" />
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pchrt_report_04"
+        android:layout_below="@+id/txvw_title_order_04"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.github.mikephil.charting.charts.PieChart>
+
+</RelativeLayout>

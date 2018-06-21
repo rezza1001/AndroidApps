@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@color/colorWhite_02"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rvly_load_more_01"
+        android:layout_width="match_parent"
+        android:background="@color/colorBlueBlack_01_t33"
+        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/size_35dp">
+
+        <TextView
+            android:id="@+id/txvw_load_more_02"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorWhite_00"
+            android:textStyle="bold"
+            android:textSize="@dimen/size_12sp"
+            android:text="Load More" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/crlvw_01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:layout_margin="@dimen/size_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <!--<RelativeLayout-->
+                <!--android:padding="@dimen/size_5dp"-->
+                <!--android:layout_marginBottom="@dimen/size_5dp"-->
+                <!--android:background="@drawable/background_sahdow_white"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="@dimen/size_290dp">-->
+
+                <!--<g.rezza.moch.clientdashboard.component.OrderReportView-->
+                    <!--android:id="@+id/ordvw_report_00"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent">-->
+                <!--</g.rezza.moch.clientdashboard.component.OrderReportView>-->
+
+            <!--</RelativeLayout>-->
+
+            <RelativeLayout
+                android:id="@+id/rvly_tsvw_report_00"
+                android:background="@drawable/background_sahdow_white"
+                android:padding="@dimen/size_5dp"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_290dp">
+
+                <g.rezza.moch.clientdashboard.component.TicketSectionView
+                    android:id="@+id/tsvw_report_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </g.rezza.moch.clientdashboard.component.TicketSectionView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rvly_chnvw_report_00"
+                android:background="@drawable/background_sahdow_white"
+                android:padding="@dimen/size_5dp"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_290dp">
+
+                <g.rezza.moch.clientdashboard.component.ChannelView
+                    android:id="@+id/chnvw_report_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </g.rezza.moch.clientdashboard.component.ChannelView>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rvly_pmtd_report_00"
+                android:background="@drawable/background_sahdow_white"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:padding="@dimen/size_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_290dp">
+
+                <g.rezza.moch.clientdashboard.component.PaymentMethodView
+                    android:id="@+id/pmtd_report_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                </g.rezza.moch.clientdashboard.component.PaymentMethodView>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txvw_normal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="@dimen/size_9sp"
+            android:text="Title Normal" />
+
+        <EditText
+            android:id="@+id/edtx_normal"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_45dp"
+            android:layout_weight="1"
+            android:inputType="textPersonName"
+            android:text="Normal Text"
+            android:textSize="@dimen/size_12sp" />
+
+        <EditText
+            android:id="@+id/edtx_password"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_45dp"
+            android:layout_weight="1"
+            android:inputType="textPassword"
+            android:text="Normal Password"
+            android:textSize="@dimen/size_12sp" />
+        <EditText
+            android:id="@+id/edtx_email"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_45dp"
+            android:layout_weight="1"
+            android:inputType="textEmailAddress"
+            android:text="Normal Email"
+            android:textSize="@dimen/size_12sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

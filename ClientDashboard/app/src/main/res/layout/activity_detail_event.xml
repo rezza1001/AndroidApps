@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="g.rezza.moch.clientdashboard.DetailEventActivity">
+
+    <RelativeLayout
+        android:background="@color/colorBlue_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/relativeLayout">
+
+        <ImageView
+            android:id="@+id/imvw_vliter_02"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_height="@dimen/size_25dp"
+            android:scaleType="fitCenter"
+            app:srcCompat="@drawable/ic_gear" />
+
+        <View
+            android:visibility="gone"
+            android:layout_width="@dimen/size_1dp"
+            android:layout_height="@dimen/size_30dp"
+            android:background="@color/colorWhite_01"
+            android:layout_centerVertical="true"
+            android:layout_toStartOf="@+id/imvw_vliter_02"></View>
+
+        <TextView
+            android:layout_marginTop="@dimen/size_5dp"
+            android:id="@+id/txvw_header_00"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="TRANSACTION"
+            android:textColor="@color/colorWhite_01"
+            android:textSize="@dimen/size_14sp"
+            android:textStyle="bold"
+            android:visibility="visible" />
+
+        <TextView
+            android:layout_marginTop="@dimen/size_1dp"
+            android:layout_below="@+id/txvw_header_00"
+            android:id="@+id/txvw_parameter_02"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="(Today)"
+            android:textColor="@color/colorWhite_02"
+            android:textSize="@dimen/size_12sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="@dimen/size_5dp"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tbvw_00"
+        android:layout_below="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_30dp"
+        android:background="@color/colorBlue_02"
+        style="@style/MyCustomTabLayout"
+        app:tabMode="fixed"
+        app:tabGravity="fill"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_below="@+id/tbvw_00" />
+
+</RelativeLayout>
