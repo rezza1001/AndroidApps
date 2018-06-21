@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorgrey_01"
+    tools:context="g.rezza.moch.mobilesales.Activity.StoreActivity">
+
+    <include
+        android:id="@+id/incl_header"
+        layout="@layout/master_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_45dp" />
+
+
+    <ScrollView
+        android:id="@+id/scvw_body_00"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/size_40dp"
+        android:layout_marginTop="@dimen/size_45dp"
+        android:padding="@dimen/size_5dp"
+        android:visibility="visible">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/size_5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_5dp_white"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:orientation="vertical"
+                android:padding="@dimen/size_5dp">
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/edtx_mybalance_00"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextView.Black.Montserrat"
+                android:textSize="@dimen/size_16sp"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:text="Detail Top Up"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_5dp_white"
+                android:orientation="vertical"
+                android:padding="@dimen/size_5dp">
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/edtx_type_00"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <g.rezza.moch.mobilesales.component.SimpleSpinner
+                    android:id="@+id/spsn_to_00"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/edtx_name_00"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/edtx_account_00"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/edtx_nominal_00"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+                <!--<android.support.design.widget.TextInputLayout-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content">-->
+
+
+                    <!--<faranjit.currency.edittext.CurrencyEditText-->
+                        <!--android:id="@+id/edtx_nominal_00"-->
+                        <!--style="@style/EditText.Login"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:hint="Nominal Saldo"-->
+                        <!--android:inputType="numberDecimal"-->
+                        <!--android:maxLines="1"-->
+                        <!--android:textStyle="bold"-->
+                        <!--android:textSize="@dimen/size_18sp"-->
+                        <!--android:singleLine="true" />-->
+
+                <!--</android.support.design.widget.TextInputLayout>-->
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:id="@+id/bbtn_action_00"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45dp"
+        android:background="@drawable/button_login"
+        style="@style/TextView.White.Montserrat"
+        android:textSize="@dimen/size_14sp"
+        android:text="SEND" />
+
+</RelativeLayout>

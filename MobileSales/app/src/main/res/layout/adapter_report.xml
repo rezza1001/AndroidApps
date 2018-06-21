@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:weightSum="10"
+        android:layout_marginBottom="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="4"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txvw_tarnsid_00"
+                style="@style/TextView.Black.Montserrat.Bold"
+                android:textSize="@dimen/size_14sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="TAPP-XXX" />
+
+            <TextView
+                android:id="@+id/txvw_status_00"
+                style="@style/TextView.Black.Montserrat"
+                android:textSize="@dimen/size_12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Success" />
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+            <TextView
+                android:id="@+id/txvw_date_00"
+                style="@style/TextView.Black.Montserrat"
+                android:textSize="@dimen/size_12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="30 Januari 2018" />
+            <TextView
+                android:id="@+id/txvw_time_00"
+                android:layout_below="@+id/txvw_date_00"
+                style="@style/TextView.Black.Montserrat"
+                android:textSize="@dimen/size_12sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="22:10:00" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_weight="3"
+            android:layout_width="0dp"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txvw_amount_00"
+                style="@style/TextView.Black.Montserrat.Bold"
+                android:gravity="right"
+                android:textSize="@dimen/size_16sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1,000,000" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</RelativeLayout>

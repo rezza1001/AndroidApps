@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:padding="@dimen/size_5dp"
+        android:background="@color/colorgrey_01"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/txvw_empty_00"
+            android:textSize="@dimen/size_14sp"
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextView.Grey.Montserrat"
+            android:text="@string/empty_data" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/srly_notif_00"
+            android:layout_marginTop="@dimen/size_5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ListView
+                android:id="@+id/lsvw_notif_00"
+                android:divider="@null"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </ListView>
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

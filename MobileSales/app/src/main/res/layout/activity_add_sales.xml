@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="g.rezza.moch.mobilesales.Activity.Sales.AddSalesActivity">
+
+    <Button
+        android:id="@+id/bbtn_action_00"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45dp"
+        android:background="@drawable/button_login"
+        style="@style/TextView.White.Montserrat"
+        android:textSize="@dimen/size_14sp"
+        android:text="@string/button_save" />
+
+
+    <LinearLayout
+        android:layout_below="@+id/incl_header"
+        android:background="@color/colorgrey_01"
+        android:layout_above="@+id/bbtn_action_00"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+        <ScrollView
+            android:layout_marginLeft="@dimen/size_5dp"
+            android:layout_marginRight="@dimen/size_5dp"
+            android:padding="@dimen/size_5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <TextView
+                    style="@style/TextView.Black.Montserrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:text="@string/user_account"
+                    android:textSize="@dimen/size_16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_15dp"
+                    android:background="@drawable/rounded_5dp_white"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/size_5dp">
+
+                    <g.rezza.moch.mobilesales.component.EditextStandardC
+                        android:id="@+id/edtx_email_00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5dp" />
+
+                    <g.rezza.moch.mobilesales.component.EditextStandardC
+                        android:visibility="gone"
+                        android:id="@+id/edtx_password_00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5dp" />
+
+                    <g.rezza.moch.mobilesales.component.EditextStandardC
+                        android:id="@+id/edtx_password_01"
+                        android:visibility="gone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5dp" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    style="@style/TextView.Black.Montserrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:text="@string/user_information"
+                    android:textSize="@dimen/size_16sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_15dp"
+                    android:background="@drawable/rounded_5dp_white"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/size_5dp">
+
+                    <g.rezza.moch.mobilesales.component.EditextStandardC
+                        android:id="@+id/edtx_name_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5dp" />
+
+                    <g.rezza.moch.mobilesales.component.EditextStandardC
+                        android:id="@+id/edtx_address_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5dp" />
+
+                    <g.rezza.moch.mobilesales.component.EditextStandardC
+                        android:id="@+id/edtx_phone1_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5dp" />
+
+                    <g.rezza.moch.mobilesales.component.EditextStandardC
+                        android:id="@+id/edtx_phone2_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5dp" />
+
+                    <g.rezza.moch.mobilesales.component.SimpleSpinner
+                        android:id="@+id/spsn_gender_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5dp" />
+
+                    <g.rezza.moch.mobilesales.component.SimpleDatePicker
+                        android:id="@+id/smdp_dob_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5dp" />
+
+                    <g.rezza.moch.mobilesales.component.SimpleSpinner
+                        android:id="@+id/spsn_idtype_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5dp" />
+
+                    <g.rezza.moch.mobilesales.component.EditextStandardC
+                        android:id="@+id/edtx_id_01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/size_5dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+    <include
+        android:id="@+id/incl_header"
+        layout="@layout/master_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

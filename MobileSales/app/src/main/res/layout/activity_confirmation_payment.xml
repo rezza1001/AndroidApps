@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="g.rezza.moch.mobilesales.Activity.TopUp.ConfirmPaymentActivity">
+
+    <ScrollView
+        android:id="@+id/scvw_body_00"
+        android:background="@color/colorgrey_01"
+        android:layout_marginBottom="@dimen/size_45dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/size_50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_5dp"
+            android:orientation="vertical" >
+
+
+            <TextView
+                style="@style/TextView.Black.Montserrat"
+                android:textSize="@dimen/size_16sp"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:text="Detail Top Up"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_5dp_white"
+                android:layout_marginBottom="@dimen/size_15dp"
+                android:orientation="vertical">
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/edtx_account_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/edtx_balance_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/edtx_total_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txvw_info_00"
+                    style="@style/TextView.Black.Montserrat"
+                    android:textSize="@dimen/size_11sp"
+                    android:textStyle="italic"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:text="Title"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+            </LinearLayout>
+
+        <TextView
+            style="@style/TextView.Black.Montserrat"
+            android:textSize="@dimen/size_16sp"
+            android:layout_marginBottom="@dimen/size_5dp"
+            android:text="Payment Method"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_5dp_white"
+            android:layout_marginBottom="@dimen/size_15dp"
+            android:orientation="vertical">
+
+            <g.rezza.moch.mobilesales.adapter.PaymentAdapter
+                android:id="@+id/pad_method_00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/txvw_info_01"
+                style="@style/TextView.Black.Montserrat"
+                android:textSize="@dimen/size_11sp"
+                android:textStyle="italic"
+                android:gravity="center"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:text="Title"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txvw_rek_00"
+                    style="@style/TextView.Black.Montserrat.Bold"
+                    android:textSize="@dimen/size_16sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:text="Rekening"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:gravity="center_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/txvw_titlecode_00"
+                    style="@style/TextView.Grey.Montserrat"
+                    android:textSize="@dimen/size_14sp"
+                    android:gravity="center"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:text="Kode transfer antar bank "
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent" />
+
+                <TextView
+                    android:id="@+id/txvw_code_00"
+                    style="@style/TextView.Black.Montserrat.Bold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_alignBaseline="@+id/txvw_titlecode_00"
+                    android:layout_alignBottom="@+id/txvw_titlecode_00"
+                    android:layout_toEndOf="@+id/txvw_titlecode_00"
+                    android:gravity="center"
+                    android:text="014"
+                    android:textSize="@dimen/size_14sp" />
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+    <Button
+        android:id="@+id/bbtn_action_00"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45dp"
+        android:background="@drawable/button_login"
+        style="@style/TextView.White.Montserrat"
+        android:textSize="@dimen/size_14sp"
+        android:text="CONFIRMATION TRANSFER" />
+    <include
+        android:id="@+id/incl_header"
+        layout="@layout/master_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</RelativeLayout>

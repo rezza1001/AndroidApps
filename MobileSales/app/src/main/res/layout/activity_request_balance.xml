@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="g.rezza.moch.mobilesales.Activity.TopUp.ConfirmPaymentActivity">
+
+
+        <LinearLayout
+            android:layout_marginTop="@dimen/size_50dp"
+            android:layout_marginBottom="@dimen/size_45dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/size_5dp"
+            android:orientation="vertical" >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/size_10dp"
+                android:paddingTop="@dimen/size_10dp"
+                android:background="@drawable/rounded_5dp_white"
+                android:layout_marginBottom="@dimen/size_15dp"
+                android:orientation="vertical">
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/edtx_account_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+                <g.rezza.moch.mobilesales.component.EditextCurrency
+                    android:id="@+id/edtx_maxlimit_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <g.rezza.moch.mobilesales.component.EditextCurrency
+                    android:id="@+id/edtx_bill_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <g.rezza.moch.mobilesales.component.EditextCurrency
+                    android:id="@+id/edtx_nominal_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <TextView
+                style="@style/TextView.Black.Montserrat"
+                android:textSize="@dimen/size_16sp"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:text="@string/request_history"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+            <android.support.design.widget.TabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/incl_body"
+                android:background="@color/background_home"
+                android:elevation="6dp"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/pager"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/tab_layout"/>
+
+
+        </LinearLayout>
+
+    <include
+        android:id="@+id/incl_header"
+        layout="@layout/master_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/bbtn_action_00"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45dp"
+        android:background="@drawable/button_login"
+        style="@style/TextView.White.Montserrat"
+        android:textSize="@dimen/size_14sp"
+        android:text="@string/button_send" />
+
+</RelativeLayout>

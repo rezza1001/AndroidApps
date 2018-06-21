@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorgrey_01"
+    tools:context="g.rezza.moch.mobilesales.Activity.StoreActivity">
+
+    <include
+        android:id="@+id/incl_header"
+        layout="@layout/master_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_45dp" />
+
+
+        <LinearLayout
+            android:layout_below="@+id/incl_header"
+            android:layout_marginBottom="@dimen/size_40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/size_5dp">
+
+            <TextView
+                style="@style/TextView.Black.Montserrat"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/header_subject_00"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:text="@string/billing_information"
+                android:textSize="@dimen/size_14sp" />
+
+            <LinearLayout
+                android:background="@drawable/rounded_5dp_white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:padding="@dimen/size_5dp"
+                android:orientation="vertical">
+
+                <g.rezza.moch.mobilesales.component.FieldTransHdr
+                    android:id="@+id/fthd_code_00"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <g.rezza.moch.mobilesales.component.FieldTransHdr
+                    android:id="@+id/fthd_created_00"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <g.rezza.moch.mobilesales.component.FieldTransHdr
+                    android:id="@+id/fthd_status_00"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <g.rezza.moch.mobilesales.component.FieldTransHdr
+                    android:id="@+id/fthd_totalbill_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <g.rezza.moch.mobilesales.component.FieldTransHdr
+                    android:id="@+id/fthd_note_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    <Button
+        android:id="@+id/bbtn_action_00"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45dp"
+        android:background="@drawable/button_login"
+        style="@style/TextView.White.Montserrat"
+        android:textSize="@dimen/size_14sp"
+        android:text="@string/button_pay" />
+
+</RelativeLayout>

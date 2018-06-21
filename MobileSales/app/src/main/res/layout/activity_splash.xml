@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="g.rezza.moch.mobilesales.Activity.SplashActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#242729"
+        android:layout_gravity="center"
+        android:id="@+id/lin_lay"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imvw_logo_00"
+            android:background="@drawable/app_icon_small" />
+
+        <TextView
+            style="@style/TextView.White.Montserrat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arbutus_slab"
+            android:gravity="center"
+            android:text="@string/app_desc"
+            android:textSize="@dimen/size_16sp" />
+
+        <TextView
+            android:id="@+id/txvw_loading_00"
+            style="@style/TextView.Grey.Montserrat"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/arbutus_slab"
+            android:gravity="center"
+            android:text="@string/check_connection"
+            android:textSize="@dimen/size_12sp" />
+
+        <com.wang.avi.AVLoadingIndicatorView
+            app:indicatorName="BallPulseIndicator"
+            style="@style/AVLoadingIndicatorView.Small"
+            app:indicatorColor="@color/color_orange_dark"
+            android:layout_width="@dimen/size_50dp"
+            android:layout_height="@dimen/size_40dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

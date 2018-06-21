@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorgrey_01"
+    tools:context="g.rezza.moch.mobilesales.Activity.StoreActivity">
+
+    <include
+        android:id="@+id/incl_header"
+        layout="@layout/master_detail"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_45dp" />
+
+
+    <ScrollView
+        android:id="@+id/scvw_body_00"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/size_40dp"
+        android:layout_marginTop="@dimen/size_45dp"
+        android:padding="@dimen/size_5dp"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_5dp_white"
+            android:orientation="vertical"
+            android:padding="@dimen/size_5dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:padding="@dimen/size_5dp">
+
+                <TextView
+                    android:id="@+id/header_subject_00"
+                    style="@style/TextView.Black.Montserrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Request Top Up (Toko PT Verdanco Engineering)"
+                    android:textSize="@dimen/size_16sp" />
+
+                <TextView
+                    android:id="@+id/txvw_name_00"
+                    style="@style/TextView.Black.Montserrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/header_subject_00"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:text="Mochamad Rezza Gumilang"
+                    android:textSize="@dimen/size_12sp" />
+
+                <TextView
+                    android:id="@+id/txvw_when_00"
+                    style="@style/TextView.Grey.Montserrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/txvw_name_00"
+                    android:text="10 Dec 2017 22:30"
+                    android:textSize="@dimen/size_12sp" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_1dp"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:background="@color/colorGrey_00"
+                android:padding="@dimen/size_5dp"></RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextView.Black.Montserrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/header_subject_00"
+                    android:layout_marginBottom="@dimen/size_5dp"
+                    android:text="@string/detail_top_up"
+                    android:textSize="@dimen/size_14sp" />
+
+                <g.rezza.moch.mobilesales.component.FieldTransDtl
+                    android:id="@+id/ftdl_balance_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <g.rezza.moch.mobilesales.component.FieldTransDtl
+                    android:id="@+id/ftdl_account_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <g.rezza.moch.mobilesales.component.FieldTransDtl
+                    android:id="@+id/ftdl_accname_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <g.rezza.moch.mobilesales.component.FieldTransDtl
+                    android:id="@+id/ftdl_status_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+                <g.rezza.moch.mobilesales.component.FieldTransDtl
+                    android:id="@+id/ftdl_approved_date_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+                <g.rezza.moch.mobilesales.component.FieldTransDtl
+                    android:id="@+id/ftdl_note_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:visibility="gone"
+        android:id="@+id/bbtn_action_00"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_45dp"
+        android:background="@drawable/button_login"
+        style="@style/TextView.White.Montserrat"
+        android:textSize="@dimen/size_14sp"
+        android:text="@string/button_allocation" />
+
+</RelativeLayout>

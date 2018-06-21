@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/rvly_root_00"
+    tools:context="g.rezza.moch.mobilesales.Activity.HomeActivity">
+
+
+    <RelativeLayout
+        android:background="@color/colorgrey_03"
+        android:id="@+id/rvly_root_header_00"
+        android:minHeight="@dimen/size_130dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:layout_marginRight="@dimen/size_5dp"
+                android:layout_weight="4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/app_icon_small" />
+
+            <RelativeLayout
+                android:id="@+id/rvly_header_01"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:layout_weight="6"
+                android:layout_width="0dp"
+                android:gravity="center_vertical"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/lnly_company_00"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView3"
+                        android:layout_marginRight="@dimen/size_5dp"
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        app:srcCompat="@mipmap/ic_merchant" />
+
+                    <TextView
+                        android:id="@+id/txvw_name_00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/size_16sp"
+                        android:textStyle="bold"
+                        style="@style/TextView.Grey.Montserrat"
+                        android:text="PT. Pulau Kencana" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:visibility="gone"
+                    android:id="@+id/lnly_owner_00"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/lnly_company_00"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_marginRight="@dimen/size_5dp"
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        app:srcCompat="@mipmap/ic_user" />
+
+                    <TextView
+                        android:id="@+id/txvw_owner_00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/size_16sp"
+                        android:textStyle="bold"
+                        style="@style/TextView.Grey.Montserrat"
+                        android:text="PT. Pulau Kencana" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/lnly_balance_00"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:orientation="horizontal"
+                    android:layout_below="@+id/lnly_owner_00"
+                    android:gravity="center_vertical"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_marginRight="@dimen/size_5dp"
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        app:srcCompat="@mipmap/ic_wallet" />
+
+                    <TextView
+                        android:id="@+id/txvw_balance_00"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/size_18sp"
+                        android:textStyle="bold"
+                        style="@style/TextView.Grey.Montserrat"
+                        android:text="Rp. 1.000.000" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/rvly_header_00"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_marginRight="@dimen/size_2dp"
+            android:layout_marginLeft="@dimen/size_2dp"
+            android:layout_height="@dimen/size_70dp"
+            android:gravity="center_vertical">
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/sparate"
+        android:layout_below="@+id/rvly_root_header_00"
+        android:layout_width="match_parent"
+        android:background="@color/color_orange_dark"
+        android:layout_height="@dimen/size_5dp">
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/scvw_body_00"
+        android:layout_below="@+id/sparate"
+        android:visibility="visible"
+        android:background="@color/colorWhite_00"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:paddingLeft="@dimen/size_5dp"
+            android:paddingRight="@dimen/size_5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:id="@+id/rvly_body_00"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/colorgrey_01"
+    android:layout_height="wrap_content">
+
+
+
+    <RelativeLayout
+        android:id="@+id/rvly_root_hdr_00"
+        android:background="@color/color_blue_dark00"
+        android:gravity="center_vertical"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_70dp">
+
+
+        <RelativeLayout
+            android:id="@+id/rvly_left_11"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:gravity="left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imvw_back_00"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="@dimen/size_35dp"
+                app:srcCompat="@mipmap/ic_back" />
+
+            <ImageView
+                android:id="@+id/imvw_left_00"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_50dp"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/imvw_back_00"
+                android:scaleType="fitStart"
+                android:src="@drawable/app_icon_small" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txvw_hdr_00"
+            style="@style/TextView.Grey.Montserrat.Bold"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/size_18sp"
+            android:text="@string/header_home"
+            android:gravity="right"
+            android:paddingEnd="@dimen/size_10dp"
+            android:layout_width="@dimen/size_190dp"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:visibility="gone"
+            android:id="@+id/rvly_right_10"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/background_oval_white"
+            android:layout_width="@dimen/size_25dp"
+            android:layout_marginRight="@dimen/size_5dp"
+            android:padding="@dimen/size_2dp"
+            android:layout_height="@dimen/size_25dp">
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/imvw_right_10"
+                android:src="@drawable/ic_printer_off"
+                android:layout_width="@dimen/size_25dp"
+                android:layout_height="@dimen/size_25dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/sparate"
+        android:layout_below="@+id/rvly_root_hdr_00"
+        android:layout_width="match_parent"
+        android:background="@color/color_orange_dark"
+        android:layout_height="@dimen/size_5dp">
+    </RelativeLayout>
+
+
+</RelativeLayout>

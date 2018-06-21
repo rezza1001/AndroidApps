@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include
+        android:id="@+id/incl_body"
+        layout="@layout/master_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <FrameLayout
+        android:layout_below="@+id/incl_body"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vwpr_pager_00"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <FrameLayout
+            android:id="@+id/fmly_header_00"
+            android:background="@color/colorGrey_00"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50dp" >
+
+            <g.rezza.moch.mobilesales.lib.pagger.PagerSlidingTabStrip
+                android:id="@+id/pstp_tabs_00"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_45dp"
+                android:layout_gravity="bottom"
+                android:background="@color/color_blue_light" />
+        </FrameLayout>
+    </FrameLayout>
+
+
+</RelativeLayout>

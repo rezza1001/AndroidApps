@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="g.rezza.moch.mobilesales.Activity.MyAccount.UserInfoActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/bbtn_action_00"
+            android:layout_alignParentStart="true">
+
+            <LinearLayout
+                android:padding="@dimen/size_5dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/TextView.Black.Montserrat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/size_10dp"
+                    android:text="@string/please_complete_userinfo"
+                    android:textSize="@dimen/size_12sp"
+                    android:textStyle="italic" />
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/text_mcid_00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5dp" />
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/text_name_00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5dp" />
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/text_address_00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5dp" />
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/text_phone1_00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5dp" />
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/text_phone2_00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5dp" />
+
+                <g.rezza.moch.mobilesales.component.SimpleSpinner
+                    android:id="@+id/smpr_gender_00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5dp" />
+
+                <g.rezza.moch.mobilesales.component.SimpleDatePicker
+                    android:id="@+id/smdp_dob_00"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+                <g.rezza.moch.mobilesales.component.SimpleSpinner
+                    android:id="@+id/smpr_idtype_00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5dp" />
+
+                <g.rezza.moch.mobilesales.component.EditextStandardC
+                    android:id="@+id/text_idvalue_00"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/size_5dp" />
+            </LinearLayout>
+
+        </ScrollView>
+        <Button
+            android:id="@+id/bbtn_action_00"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_45dp"
+            android:background="@drawable/button_login"
+            style="@style/TextView.White.Montserrat"
+            android:textSize="@dimen/size_14sp"
+            android:text="@string/button_finish" />
+
+    </RelativeLayout>
+
+</RelativeLayout>
