@@ -29,8 +29,8 @@ import g.rezza.moch.unileverapp.lib.Parse;
 
 public class ChartActivity extends AppCompatActivity {
 
-    private ImageView imvw_back_00;
     private static final String TAG = "ChartActivity";
+    private ImageView imvw_back_00;
     private ListView                    lsvw_order_00;
     private ProductOrderAdapter         adapter;
     private ArrayList<MyOrderHolder>    list = new ArrayList<>();

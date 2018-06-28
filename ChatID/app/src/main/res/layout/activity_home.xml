@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".HomeActivity">
+
+    <RelativeLayout
+        android:id="@+id/rvly_header_00"
+        android:background="@color/colorAccent"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:padding="@dimen/size_10dp"
+        android:layout_height="@dimen/size_60dp">
+
+        <RelativeLayout
+            android:id="@+id/rvly_foto_00"
+            android:background="@drawable/background_oval_white"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_width="@dimen/size_40dp"
+            android:layout_height="@dimen/size_40dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imvw_profile_00"
+                android:layout_width="@dimen/size_40dp"
+                android:layout_height="@dimen/size_40dp"
+                app:srcCompat="@drawable/ic_account_circle" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/txvw_name_00"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_16sp"
+            android:text="Stranger"
+            android:layout_toRightOf="@+id/rvly_foto_00" />
+
+        <ImageView
+            android:id="@+id/imvw_end_00"
+            android:scaleType="fitEnd"
+            android:paddingTop="@dimen/size_8dp"
+            android:paddingBottom="@dimen/size_8dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_more_vert" />
+    </RelativeLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_below="@+id/rvly_header_00"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="@dimen/size_6dp"
+        android:background="@color/colorPrimary"
+        app:tabIndicatorColor="@color/white"
+        app:tabSelectedTextColor="@color/white"
+        app:tabTextColor="@color/unselected_color"
+        android:theme="@style/TabLayoutTextStyle"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/tab_layout"/>
+
+</RelativeLayout>

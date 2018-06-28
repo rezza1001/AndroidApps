@@ -88,7 +88,7 @@ public class SignInActivity extends AppCompatActivity {
         String phone    = "+6281219976562";
         String location = latitude+","+longitude;
         String username = edtx_username_00.getText().toString();
-        String password = edtx_password_00.getText().toString();
+        final String password = edtx_password_00.getText().toString();
         Log.d("TAG", longitude +" | "+ latitude);
 
         if (username.isEmpty()){
@@ -136,6 +136,7 @@ public class SignInActivity extends AppCompatActivity {
                         outletDB.outlet_id      = data.getString("outlet_id");
                         outletDB.username       = data.getString("username");
                         outletDB.outlet_name    = data.getString("outlet_name");
+                        outletDB.password       = password;
                         outletDB.mine           = 1;
                         outletDB.insert(SignInActivity.this);
                     } catch (JSONException e) {

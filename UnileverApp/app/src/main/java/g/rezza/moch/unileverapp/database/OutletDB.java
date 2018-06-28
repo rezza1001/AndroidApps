@@ -16,15 +16,21 @@ public class OutletDB {
     public String user_id = "";
     public String outlet_id;
     public String username;
+    public String password;
     public int    mine;
     public String outlet_name;
+    public String outlet_contact;
     public String outlet_address;
     public String outlet_city;
     public String outlet_phone;
     public String outlet_email;
     public String outlet_photo;
-    public String outlet_term;
+    public String outlet_term = "-1";
     public String outlet_limit;
+    public String outlet_npwp;
+    public String outlet_npwp_addr;
+    public String outlet_nik;
+    public String url_foto;
 
     public static final String TAG   = "OutletDB";
 
@@ -43,6 +49,11 @@ public class OutletDB {
     public static final String FIELD_O_PHOTO    = "outlet_photo";
     public static final String FIELD_O_TERM     = "outlet_term_of_payment";
     public static final String FIELD_O_LIMIT    = "outlet_credit_limit";
+    public static final String FIELD_O_NPWP       = "outlet_npwp";
+    public static final String FIELD_O_NPWP_ADDR  = "outlet_npwp_address";
+    public static final String FIELD_O_NIK        = "outlet_nik";
+    public static final String FIELD_O_FOTO    = "outlet_nik_foto";
+    public static final String FIELD_PASSWORD    = "password";
 
 
     public String getCreateTable() {
@@ -61,6 +72,11 @@ public class OutletDB {
                 " " + FIELD_O_PHOTO  + " varchar(100) NULL," +
                 " " + FIELD_O_TERM  + " varchar(10) NULL," +
                 " " + FIELD_O_LIMIT  + " varchar(30) NULL," +
+                " " + FIELD_O_NPWP  + " varchar(30) NULL," +
+                " " + FIELD_O_NPWP_ADDR  + " varchar(255) NULL," +
+                " " + FIELD_O_NIK + " varchar(50) NULL," +
+                " " + FIELD_O_FOTO  + " varchar(255) NULL," +
+                " " + FIELD_PASSWORD  + " varchar(30) NULL," +
                 "  PRIMARY KEY (" + FIELD_USER_ID +"))";
         return create;
     }
@@ -79,6 +95,12 @@ public class OutletDB {
         contentValues.put(FIELD_O_PHOTO, outlet_photo);
         contentValues.put(FIELD_O_TERM, outlet_term);
         contentValues.put(FIELD_O_LIMIT, outlet_limit);
+        contentValues.put(FIELD_O_CONTACT, outlet_contact);
+        contentValues.put(FIELD_O_NPWP, outlet_npwp);
+        contentValues.put(FIELD_O_NPWP_ADDR, outlet_npwp_addr);
+        contentValues.put(FIELD_O_NIK, outlet_nik);
+        contentValues.put(FIELD_O_FOTO, url_foto);
+        contentValues.put(FIELD_PASSWORD, password);
         return contentValues;
     }
 
@@ -134,6 +156,13 @@ public class OutletDB {
                 this.outlet_photo   = res.getString(res.getColumnIndex(FIELD_O_PHOTO));
                 this.outlet_term    = res.getString(res.getColumnIndex(FIELD_O_TERM));
                 this.outlet_limit   = res.getString(res.getColumnIndex(FIELD_O_LIMIT));
+                this.outlet_contact   = res.getString(res.getColumnIndex(FIELD_O_CONTACT));
+                this.outlet_npwp    = res.getString(res.getColumnIndex(FIELD_O_NPWP));
+                this.outlet_npwp_addr   = res.getString(res.getColumnIndex(FIELD_O_NPWP_ADDR));
+                this.outlet_nik     = res.getString(res.getColumnIndex(FIELD_O_NIK));
+                this.url_foto     = res.getString(res.getColumnIndex(FIELD_O_FOTO));
+
+                this.password   = res.getString(res.getColumnIndex(FIELD_PASSWORD));
             }
             pDB.close();
         }catch (Exception e){

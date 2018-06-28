@@ -60,11 +60,25 @@
             android:name=".PaymentActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden" />
-        <activity android:name=".OrderDetailActivity"  android:screenOrientation="portrait" />
-        <activity android:name=".InvoiceDetailActivity"  android:screenOrientation="portrait"/>
-        <activity android:name=".ForgotPwdActivity"  android:screenOrientation="portrait" />
-        <activity android:name=".FinishPaymentActivity"  android:screenOrientation="portrait"/>
-        <activity android:name=".WebViewActivity"  android:screenOrientation="portrait"/>
+        <activity
+            android:name=".OrderDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".InvoiceDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".ForgotPwdActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FinishPaymentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".WebViewActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".ChangePwdActivity"  android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity android:name=".UpdateProfileActivity"  android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" ></activity>
     </application>
 
 </manifest>

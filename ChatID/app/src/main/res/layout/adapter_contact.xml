@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_vertical"
+    android:paddingBottom="@dimen/size_5dp"
+    android:paddingTop="@dimen/size_5dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rvly_image_00"
+        android:layout_width="@dimen/size_58dp"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/rvly_foto_00"
+            android:background="@drawable/background_oval_white"
+            android:padding="@dimen/size_1dp"
+            android:gravity="center"
+            android:layout_width="@dimen/size_58dp"
+            android:layout_height="@dimen/size_58dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imvw_profile_00"
+                android:src="@drawable/rezza"
+                android:layout_width="@dimen/size_55dp"
+                android:layout_height="@dimen/size_55dp"/>
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/imvw_status_00"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/size_15dp"
+            android:layout_height="@dimen/size_15dp"
+            android:layout_alignParentTop="true"
+            app:srcCompat="@android:drawable/presence_online" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/txvw_name_00"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_60dp"
+        android:layout_marginLeft="@dimen/size_10dp"
+        android:gravity="center_vertical"
+        android:textSize="@dimen/size_16sp"
+        android:layout_alignBottom="@+id/rvly_image_00"
+        android:layout_toEndOf="@+id/rvly_image_00"
+        android:textColor="@color/black"
+        android:text="TextView"
+        android:layout_toRightOf="@+id/rvly_image_00" />
+
+    <RelativeLayout
+        android:layout_below="@+id/txvw_name_00"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:background="@color/black_25"
+        android:layout_marginLeft="@dimen/size_65dp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_2dp"></RelativeLayout>
+
+
+</RelativeLayout>

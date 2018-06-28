@@ -11,6 +11,8 @@
     <string name="password">Password</string>
     <string name="login_now">Masuk</string>
     <string name="send">Kirim</string>
+    <string name="save">Simpan</string>
+    <string name="change_image">Ubah Foto</string>
     <string name="register_now">Daftar Sekarang</string>
     <string name="continue_order">Konfirmasi Pesanan</string>
     <string name="add_to_chart">Add to Chart</string>
@@ -27,11 +29,15 @@
     <string name="city">Kota </string>
     <string name="phone">No. Telepon Outlet </string>
     <string name="email">Email Outlet </string>
+    <string name="new_password">Password Baru</string>
     <string name="npwp">NPWP </string>
     <string name="nik">NIK </string>
     <string name="npwp_address">Alamat NPWP </string>
     <string name="term_of_payment">Outlet Term of Payment </string>
-    <string name="confirm_password">Confirmation Password </string>
+    <string name="confirm_password">Konfirmasi Password </string>
+    <string name="alert_empty_password">Password salah! </string>
+    <string name="alert_new_password_rq">Password baru harus di isi! </string>
+    <string name="alert_confirm_pwd">Konfirmasi Password baru salah! </string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -84,4 +90,5 @@
     <string name="sort">Urutkan</string>
     <string name="search_product">Cari Produk</string>
     <string name="cash_payment">Pembayaran Tunai</string>
+    <string name="file_image_maximum">Maksimal Ukuran gambar (2MB) !</string>
 </resources>

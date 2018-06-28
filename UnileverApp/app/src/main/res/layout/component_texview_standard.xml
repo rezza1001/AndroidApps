@@ -28,9 +28,9 @@
                     android:layout_marginRight="@dimen/size_10dp"
                     android:layout_alignParentLeft="true"
                     android:src="@drawable/ic_info_outline"
-                    app:civ_fill_color="#42c4ff"
+                    app:civ_fill_color="#e07218"
                     app:civ_border_width="@dimen/size_5dp"
-                    app:civ_border_color="#42c4ff"
+                    app:civ_border_color="#e07218"
                     android:id="@+id/circleImageView" />
 
                 <LinearLayout

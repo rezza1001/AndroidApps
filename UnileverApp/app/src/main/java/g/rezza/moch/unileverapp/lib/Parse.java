@@ -102,4 +102,18 @@ public class Parse {
         return (double) tmp / factor;
     }
 
+    public static String getString(String param){
+        String data = "";
+
+        try {
+            data = param;
+            if (param == null){
+                data = "";
+            }
+        }catch (Exception e){
+            Log.d("PARSE", "NULL Convert To String");
+        }
+        return data;
+    }
+
 }

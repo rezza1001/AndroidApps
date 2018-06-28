@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">ChatID</string>
+
+    <string name="sign_in">Sign In</string>
+    <string name="submit">Submit</string>
+    <string name="send">Send</string>
+    <string name="verification_number">Verification Number</string>
+    <string name="start_random_chat">Start Random Chat</string>
+    <string name="please_wait">Please Wait...</string>
+    <string name="no">No</string>
+    <string name="yes">Yes</string>
+    <string name="phone_number">Phone Number</string>
+    <string name="looking_a_friend">Looking a friend...</string>
+    <string name="alert_dc_header">Are you sure want to disconnect this conversation ?</string>
+    <string name="alert_dc_body">You can not undo this action and your conversation will be deleted</string>
+</resources>

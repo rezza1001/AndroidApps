@@ -7,6 +7,7 @@
     <dimen name="size_4dp_negative">-6dp</dimen>
     <dimen name="size_5dp_negative">-7dp</dimen>
     <dimen name="size_10dp_negative">-15dp</dimen>
+    <dimen name="size_20dp_negative">-30dp</dimen>
 
     <dimen name="size_1dp">1dp</dimen>
     <dimen name="size_2dp">3dp</dimen>

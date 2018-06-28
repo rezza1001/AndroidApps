@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".RandomChatActivity">
+
+    <RelativeLayout
+        android:id="@+id/rvly_header_00"
+        android:background="@color/colorAccent"
+        android:layout_alignParentTop="true"
+        android:layout_width="match_parent"
+        android:padding="@dimen/size_10dp"
+        android:layout_height="@dimen/size_55dp">
+
+        <RelativeLayout
+            android:id="@+id/rvly_foto_00"
+            android:background="@drawable/background_oval_white"
+            android:layout_marginRight="@dimen/size_10dp"
+            android:layout_width="@dimen/size_35dp"
+            android:layout_height="@dimen/size_35dp">
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="@dimen/size_35dp"
+                android:layout_height="@dimen/size_35dp"
+                app:srcCompat="@drawable/ic_account_circle" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/white"
+            android:textSize="@dimen/size_16sp"
+            android:text="Stranger"
+            android:layout_toRightOf="@+id/rvly_foto_00" />
+
+        <ImageView
+            android:id="@+id/imvw_end_00"
+            android:scaleType="fitEnd"
+            android:paddingTop="@dimen/size_2dp"
+            android:paddingBottom="@dimen/size_2dp"
+            android:layout_alignParentRight="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            app:srcCompat="@drawable/ic_highlight_off" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rvly_footer_00"
+        android:paddingTop="@dimen/size_5dp"
+        android:paddingBottom="@dimen/size_5dp"
+        android:paddingLeft="@dimen/size_10dp"
+        android:paddingRight="@dimen/size_10dp"
+        android:layout_marginBottom="@dimen/size_10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_60dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:background="@drawable/background_round_white"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/size_55dp"
+            android:paddingLeft="@dimen/size_10dp"
+            android:gravity="center_vertical"
+            android:weightSum="10"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imvw_emoticon_00"
+                android:scaleType="fitStart"
+                android:layout_width="@dimen/size_25dp"
+                android:layout_height="@dimen/size_25dp"
+                android:layout_marginRight="@dimen/size_5dp"
+                app:srcCompat="@drawable/ic_insert_emoticon" />
+
+            <EditText
+                android:id="@+id/edtx_message_00"
+                android:background="@android:color/transparent"
+                android:layout_weight="10"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/size_16sp"
+                android:hint="Type here ..."
+                android:inputType="textMultiLine" />
+
+            <ImageView
+                android:id="@+id/imvw_attach_00"
+                android:layout_width="@dimen/size_25dp"
+                android:layout_height="@dimen/size_25dp"
+                android:layout_marginRight="@dimen/size_5dp"
+                app:srcCompat="@drawable/ic_attach_file" />
+        </LinearLayout>
+        <RelativeLayout
+            android:id="@+id/rvly_send_00"
+            android:background="@drawable/background_oval_white"
+            android:layout_alignParentRight="true"
+            android:layout_width="@dimen/size_50dp"
+            android:padding="@dimen/size_5dp"
+            android:gravity="center"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_marginLeft="@dimen/size_10dp"
+                android:layout_width="@dimen/size_27dp"
+                android:layout_height="@dimen/size_27dp"
+                app:srcCompat="@drawable/ic_send" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:padding="@dimen/size_10dp"
+        android:id="@+id/rcvw_chat_00"
+        android:layout_below="@+id/rvly_header_00"
+        android:layout_above="@+id/rvly_footer_00"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <RelativeLayout
+        android:id="@+id/rvly_notif_00"
+        android:background="@color/black_50"
+        android:gravity="center"
+        android:padding="@dimen/size_10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:background="@drawable/background_round_white_2"
+            android:padding="@dimen/size_10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txvw_alert_hdr_00"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alert_dc_header" />
+
+            <TextView
+                android:id="@+id/txvw_alert_bdy_00"
+                android:layout_below="@id/txvw_alert_hdr_00"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/alert_dc_body" />
+
+            <LinearLayout
+                android:layout_below="@+id/txvw_alert_bdy_00"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_width="match_parent"
+                android:gravity="right|center_vertical"
+                android:layout_height="40dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txvw_no_00"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="@dimen/size_80dp"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:padding="@dimen/size_10dp"
+                    android:text="@string/no" />
+
+                <TextView
+                    android:id="@+id/txvw_yes_00"
+                    android:gravity="center"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_width="@dimen/size_80dp"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/size_10dp"
+                    android:text="@string/yes" />
+            </LinearLayout>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
