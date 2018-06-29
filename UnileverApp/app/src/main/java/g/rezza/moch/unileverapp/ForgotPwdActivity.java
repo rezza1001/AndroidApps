@@ -1,7 +1,9 @@
 package g.rezza.moch.unileverapp;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -9,6 +11,12 @@ import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import g.rezza.moch.unileverapp.connection.PostManager;
+import g.rezza.moch.unileverapp.lib.ErrorCode;
 
 public class ForgotPwdActivity extends AppCompatActivity {
 
@@ -71,6 +79,33 @@ public class ForgotPwdActivity extends AppCompatActivity {
             Toast.makeText(this, "Silahkan isi "+ getResources().getString(R.string.phone), Toast.LENGTH_LONG).show();
             return;
         }
+
+        PostManager post = new PostManager(this);
+        post.setApiUrl("Authenticate/forget_account");
+        JSONObject send = new JSONObject();
+        try {
+            send.put("request_type","13");
+            JSONObject data = new JSONObject();
+            data.put("outlet_email", email);
+            data.put("outlet_phone", phone);
+            send.put("data",data);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        post.setData(send);
+        post.execute("POST");
+        post.setOnReceiveListener(new PostManager.onReceiveListener() {
+            @Override
+            public void onReceive(JSONObject obj, int code, String message) {
+                if (code == ErrorCode.OK){
+                    Toast.makeText(ForgotPwdActivity.this, message, Toast.LENGTH_SHORT).show();
+                    onBackPressed();
+                }
+                else {
+                    Toast.makeText(ForgotPwdActivity.this, message, Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 
     @Override

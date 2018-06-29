@@ -154,6 +154,7 @@ public class ProfileFragment extends Fragment {
         txpf_o_nik_00.setValue(Parse.getString(outletDB.outlet_nik));
 
         String url_foto = Parse.getString(outletDB.url_foto);
+        Log.d(TAG,"URL FOTO "+ outletDB.url_foto);
         if (!url_foto.isEmpty()){
             String path = "http://202.154.3.188/commerce/unilever-middleware/uploads/"+outletDB.outlet_id+"/";
             Glide.with(getActivity()).load(path+"/"+url_foto).into(imvw_account_00);

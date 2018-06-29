@@ -138,19 +138,65 @@ public class SignInActivity extends AppCompatActivity {
                         outletDB.outlet_name    = data.getString("outlet_name");
                         outletDB.password       = password;
                         outletDB.mine           = 1;
-                        outletDB.insert(SignInActivity.this);
+                        synchProfile(outletDB);
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
 
-                    Intent intent = new Intent(SignInActivity.this, MainActivity.class);
-                    startActivity(intent);
-                    SignInActivity.this.finish();
+
                 }
                 else {
                     Toast.makeText(SignInActivity.this, message, Toast.LENGTH_SHORT).show();
                 }
                 Log.d("TAGRZ", obj.toString());
+            }
+        });
+    }
+
+    private void synchProfile(final OutletDB outletDB){
+        PostManager post = new PostManager(this);
+        post.setApiUrl("Profile/get_profile");
+        JSONObject send = new JSONObject();
+        try {
+            send.put("request_type","19");
+            JSONObject data = new JSONObject();
+            JSONObject user_info = new JSONObject();
+            user_info.put("username",outletDB.username);
+            user_info.put("outlet_id", outletDB.outlet_id);
+            data.put("user_info", user_info);
+            send.put("data",data);
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        post.setData(send);
+        post.execute("POST");
+        post.setOnReceiveListener(new PostManager.onReceiveListener() {
+            @Override
+            public void onReceive(JSONObject obj, int code, String message) {
+                if (code == ErrorCode.OK){
+                    try {
+                        JSONObject data = obj.getJSONObject("data");
+                        outletDB.outlet_contact = data.getString("outlet_contact");
+                        outletDB.outlet_email = data.getString("outlet_email");
+                        outletDB.outlet_address = data.getString("outlet_address");
+                        outletDB.outlet_city = data.getString("outlet_city");
+                        outletDB.outlet_phone = data.getString("outlet_phone");
+                        outletDB.url_foto = data.getString("outlet_photo").replaceAll("\\\\", "");;
+                        outletDB.outlet_nik = data.getString("outlet_nik");
+                        outletDB.outlet_npwp = data.getString("outlet_npwp");
+                        outletDB.outlet_npwp_addr = data.getString("outlet_npwp_address");
+                        outletDB.insert(SignInActivity.this);
+                        Log.d("TAGRZ", " outletDB.outlet_photo "+outletDB.outlet_photo);
+                        Intent intent = new Intent(SignInActivity.this, MainActivity.class);
+                        startActivity(intent);
+                        SignInActivity.this.finish();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+                else {
+                    Toast.makeText(SignInActivity.this, message, Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

@@ -69,6 +69,7 @@ public class UpdateProfileActivity extends AppCompatActivity {
         rvly_notif_00.setVisibility(View.GONE);
         rvly_cart_00.setVisibility(View.GONE);
         txvw_title_00.setText(getResources().getString(R.string.change_password));
+        edtx_email_00.setVisibility(View.GONE);
     }
 
     private void initListener(){

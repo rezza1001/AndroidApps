@@ -253,6 +253,8 @@ public class MainActivity extends AppCompatActivity
 
     }
 
+
+
     private void logout(){
         loadingScreen.dimiss();
         OutletDB outletDB = new OutletDB();

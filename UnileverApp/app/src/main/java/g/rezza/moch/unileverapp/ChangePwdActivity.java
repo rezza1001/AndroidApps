@@ -99,7 +99,7 @@ public class ChangePwdActivity extends AppCompatActivity {
             JSONObject data = new JSONObject();
             JSONObject user_info = new JSONObject();
             user_info.put("username",outlet.username);
-            user_info.put("outlet_id", outlet.user_id);
+            user_info.put("outlet_id", outlet.outlet_id);
             user_info.put("password_old", password);
             user_info.put("password_new", new_pwd);
             data.put("user_info", user_info);
